@@ -2,18 +2,90 @@ body {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
   font-style: normal;
   line-height: 1.4;
 }
 
-.logo {
+.f-bebas-neue, .section-title {
   font-family: "Bebas Neue", sans-serif;
   text-transform: uppercase;
   font-size: 3rem;
+  line-height: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.h-100vh {
+  height: 100vh;
+}
+
+section {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.section-title {
+  position: relative;
+  margin-bottom: 6.5rem;
+  text-align: center;
+  font-size: 4rem;
+}
+.section-title:after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 160px;
+  height: 2px;
+  background-color: var(--godfryd-primary);
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll-down {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.scroll-down i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background-color: var(--godfryd-primary);
+  color: var(--godfryd-white);
+  font-size: 22px;
+  margin-right: 14px;
+}
+
+.avatar {
+  width: fit-content;
+}
+.avatar div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 20px;
+  right: 20px;
+  border: 3px solid var(--godfryd-primary);
 }
 
 .navbar {
+  font-weight: 500;
   --bs-nav-link-font-size: 24px;
   --bs-nav-link-font-weight: 500;
 }
@@ -29,14 +101,67 @@ body {
   display: block;
   content: "";
   bottom: 4px;
-  left: 0;
+  left: 5px;
   right: 100%;
   height: 2px;
   background-color: var(--godfryd-primary);
   transition: 0.4s ease-out;
 }
 .navbar .nav-link:hover:before, .navbar .nav-link.active:before {
-  right: 0;
+  right: 5px;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 22px;
+}
+.skills div {
+  background-color: var(--godfryd-white);
+  color: var(--godfryd-black);
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+}
+.skills div i {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+.skills div p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+footer h6 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+footer ul {
+  position: relative;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 1rem;
+}
+footer ul li i {
+  margin-right: 5px;
+}
+footer ul li:last-of-type a {
+  margin-right: 20px;
+}
+footer ul a:hover {
+  color: var(--godfryd-primary);
+}
+footer ul:before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 2px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--godfryd-primary);
 }
 
 /*# sourceMappingURL=style.css.map */
