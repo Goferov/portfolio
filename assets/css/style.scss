@@ -16,6 +16,11 @@ body{
 a {
   color: inherit;
   text-decoration: none;
+
+  &:hover {
+    color: var(--godfryd-primary);
+  }
+
 }
 
 .h-100vh {
@@ -149,6 +154,42 @@ header {
       font-weight: bold;
       margin-bottom: 0;
     }
+  }
+}
+
+
+
+// FORM
+
+.form-wrapper {
+  --bs-border-color: var(--godfryd-gray);
+  --bs-body-bg: var(--godfryd-graylight);
+  --bs-border-radius: 0;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .25);
+  -moz-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .25);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .25);
+
+  label {
+    font-size: 14px;
+  }
+  .form-control {
+    &:focus {
+      box-shadow: 0 0 0 0.1rem rgba(118, 118, 118, 0.25);
+      border-color: var(--godfryd-graydark);
+    }
+
+    &::placeholder {
+      color: var(--placeholder-color);
+    }
+
+    &:-ms-input-placeholder {
+      color: var(--placeholder-color);
+    }
+
+    &::-ms-input-placeholder {
+      color: var(--placeholder-color);
+    }
+
   }
 }
 

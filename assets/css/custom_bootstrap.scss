@@ -38,6 +38,8 @@ $theme-colors: map-merge($theme-colors, (
 
   --bs-border-color: #{$light};
   --bs-border-width: 1px;
+
+  --placeholder-color: #A1A1A1;
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1{

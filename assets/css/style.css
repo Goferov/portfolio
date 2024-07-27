@@ -17,6 +17,9 @@ a {
   color: inherit;
   text-decoration: none;
 }
+a:hover {
+  color: var(--godfryd-primary);
+}
 
 .h-100vh {
   height: 100vh;
@@ -131,6 +134,31 @@ header {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 0;
+}
+
+.form-wrapper {
+  --bs-border-color: var(--godfryd-gray);
+  --bs-body-bg: var(--godfryd-graylight);
+  --bs-border-radius: 0;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.form-wrapper label {
+  font-size: 14px;
+}
+.form-wrapper .form-control:focus {
+  box-shadow: 0 0 0 0.1rem rgba(118, 118, 118, 0.25);
+  border-color: var(--godfryd-graydark);
+}
+.form-wrapper .form-control::placeholder {
+  color: var(--placeholder-color);
+}
+.form-wrapper .form-control:-ms-input-placeholder {
+  color: var(--placeholder-color);
+}
+.form-wrapper .form-control::-ms-input-placeholder {
+  color: var(--placeholder-color);
 }
 
 footer h6 {
