@@ -37,6 +37,13 @@ header {
   z-index: 1000;
 }
 
+section:nth-of-type(odd) {
+  background-color: var(--godfryd-graylight);
+}
+section:nth-of-type(even) {
+  background-color: var(--godfryd-white);
+}
+
 .section-title {
   position: relative;
   margin-bottom: 6.5rem;
@@ -114,26 +121,38 @@ header {
   right: 5px;
 }
 
-.skills {
+.skills-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 22px;
 }
-.skills div {
+.skills-list div {
   background-color: var(--godfryd-white);
   color: var(--godfryd-black);
   padding: 1rem;
   text-align: center;
   cursor: pointer;
 }
-.skills div i {
+.skills-list div i {
   font-size: 4rem;
   margin-bottom: 0.5rem;
 }
-.skills div p {
+.skills-list div p {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 0;
+}
+.skills .switch {
+  color: var(--godfryd-graydark);
+}
+.skills .switch.active, .skills .switch:hover {
+  color: var(--godfryd-black);
+}
+.skills .switch .fa-chevron-down {
+  transition: transform 0.3s ease;
+}
+.skills .switch.active .fa-chevron-down {
+  transform: rotate(180deg);
 }
 
 .form-wrapper {
@@ -175,6 +194,18 @@ header {
   .project-list {
     grid-template-columns: 1fr;
   }
+}
+
+.project-tags span {
+  background-color: var(--godfryd-primary);
+  padding: 0.4rem 0.5rem;
+  margin: 0 0.3rem;
+}
+.project-tags span:first-of-type {
+  margin-left: 0;
+}
+.project-tags span:last-of-type {
+  margin-right: 0;
 }
 
 .project-box {

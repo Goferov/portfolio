@@ -39,6 +39,16 @@ header {
   z-index: 1000;
 }
 
+section {
+  &:nth-of-type(odd) {
+    background-color: var(--godfryd-graylight);
+  }
+
+  &:nth-of-type(even) {
+    background-color: var(--godfryd-white);
+  }
+}
+
 .section-title {
   @extend .f-bebas-neue;
   position: relative;
@@ -133,29 +143,50 @@ header {
 // SKILLS
 
 .skills {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 22px;
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 22px;
 
-  div {
-    background-color: var(--godfryd-white);
-    color: var(--godfryd-black);
-    padding: 1rem;
-    text-align: center;
-    cursor: pointer;
+    div {
+      background-color: var(--godfryd-white);
+      color: var(--godfryd-black);
+      padding: 1rem;
+      text-align: center;
+      cursor: pointer;
 
-    i {
-      font-size: 4rem;
-      margin-bottom: 0.5rem;
-    }
+      i {
+        font-size: 4rem;
+        margin-bottom: 0.5rem;
+      }
 
-    p {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-bottom: 0;
+      p {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 0;
+      }
     }
   }
+
+  .switch {
+    color: var(--godfryd-graydark);
+
+    &.active, &:hover {
+      color: var(--godfryd-black);
+    }
+    .fa-chevron-down {
+      transition: transform .3s ease;
+    }
+    &.active {
+      .fa-chevron-down {
+        transform: rotate(180deg);
+      }
+    }
+
+  }
 }
+
+
 
 
 
@@ -210,6 +241,25 @@ header {
     grid-template-columns: 1fr;
   }
 
+}
+
+.project {
+  &-tags  {
+    span {
+      background-color: var(--godfryd-primary);
+      padding: 0.4rem 0.5rem;
+      margin: 0 .3rem;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+    }
+  }
 }
 
 .project-box {
