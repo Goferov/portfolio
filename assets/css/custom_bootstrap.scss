@@ -28,7 +28,6 @@ $theme-colors: map-merge($theme-colors, (
 :root{
   --godfryd-primary: #{$primary};
   --godfryd-primary-subtle: #{$primary-subtle};
-
   --godfryd-white: #FFFFFF;
   --godfryd-graylight: #{$graylight};
   --godfryd-graydark: #{$graydark};
@@ -40,6 +39,7 @@ $theme-colors: map-merge($theme-colors, (
   --bs-border-width: 1px;
 
   --placeholder-color: #A1A1A1;
+  --fancybox-zIndex: 1000000;
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1{

@@ -93,7 +93,7 @@
                                 I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.
                             </p>
                         </div>
-                        <a href="#contact" title="Download CV" class="btn btn-primary my-3 d-flex align-items-center px-5">Download CV <i class="fa-solid fa-download ms-2 fs-5"></i></a>
+                        <a download="" target="_blank" href="assets/pdf/Marcin-Godfryd-CV.pdf" title="Download CV" class="btn btn-primary my-3 d-flex align-items-center px-5">Download CV <i class="fa-solid fa-download ms-2 fs-5"></i></a>
                     </div>
                     <div class="col-lg-5">
                         <div class="w-100 position-relative ">
@@ -109,13 +109,13 @@
                     <h2 class="section-title">Skills</h2>
                     <div class="col-lg-5 ">
                         <h3 class="text-center mb-5">
-                            <a href="#" class="switch active">
+                            <a href="#frontend-skills" data-bs-toggle="collapse" class="switch collapsed" aria-expanded="false" aria-controls="frontend-skills">
                                 <i class="fa-solid fa-code"></i>
                                 Frontend Developer
                                 <i class="fa-solid fa-chevron-down"></i>
                             </a>
                         </h3>
-                        <div class="skills-list">
+                        <div class="skills-list collapse" id="frontend-skills">
                             <div>
                                 <i class="fa-brands fa-html5"></i>
                                 <p>HTML</p>
@@ -152,13 +152,13 @@
                     </div>
                     <div class="col-lg-5">
                         <h3 class="text-center mb-5">
-                            <a href="#" class="switch">
+                            <a href="#backend-skills" class="switch collapsed" data-bs-toggle="collapse">
                                 <i class="fa-solid fa-server"></i>
                                 Backend Developer
                                 <i class="fa-solid fa-chevron-down"></i>
                             </a>
                         </h3>
-                        <div class="skills-list">
+                        <div class="skills-list collapse" id="backend-skills">
                             <div>
                                 <i class="fa-brands fa-node-js"></i>
                                 <p>Node.js</p>
@@ -236,32 +236,45 @@
                                     <h3 class="fs-5 fw-normal">View details <i class="fa-solid fa-arrow-up-right-from-square fs-6"></i></h3>
                                 </div>
                             </div>
-                            <!-- Modal -->
-                            <div class="modal fade" id="staticBackdrop"  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-xl">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="staticBackdropLabel">Restaurant rater</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="row">
-                                                <div class="col-lg-5">
-                                                    <a href="assets/img/project.png" data-fancybox="gallery" data-caption="Caption #2" class="modal-project-img"><img src="assets/img/project.png" alt="" class="w-100"/></a>
-                                                </div>
-                                                <div class="col-lg-7">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur magna euismod, bibendum velit sit amet, condimentum nibh. In vitae enim felis. Cras id commodo diam, non commodo mi. Ut dignissim feugiat dui vel venenatis. Donec rutrum molestie rutrum. Cras eu rhoncus magna. Duis vitae efficitur erat, nec imperdiet lectus.</p>
-                                                    <div class="project-links my-4">
-                                                        <a href="https://github.com/Goferov/restaurant-rater" target="_blank"><i class="fa-brands fa-github text-primary me-2"></i> See on github</a>
-                                                    </div>
+                        </div>
 
-                                                    <div class="project-tags text-white fw-medium d-flex align-items-center">
-                                                        <span>HTML</span>
-                                                        <span>JS</span>
-                                                        <span>CSS</span>
-                                                        <span>PHP</span>
-                                                        <span>POSTGRESQL</span>
+                        <div class="modal modal-xl fade" id="staticBackdrop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Restaurant rater</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-lg-5 project-gallery">
+                                                <a href="assets/img/project.png" data-fancybox="gallery" data-caption="Caption #2" class="modal-project-img"><img src="assets/img/project.png" alt="" class="w-100 "/></a>
+                                                <div class="row mt-3">
+                                                    <div class="col-lg-4">
+                                                        <a href="assets/img/project.png" data-fancybox="gallery" data-caption="Caption #2" class="modal-project-img"><img src="assets/img/project.png" alt="" class="w-100 "/></a>
                                                     </div>
+                                                    <div class="col-lg-4">
+                                                        <a href="assets/img/project.png" data-fancybox="gallery" data-caption="Caption #2" class="modal-project-img"><img src="assets/img/project.png" alt="" class="w-100 "/></a>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <a href="assets/img/project.png" data-fancybox="gallery" data-caption="Caption #2" class="modal-project-img"><img src="assets/img/project.png" alt="" class="w-100 "/></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-7">
+                                                <h4 class="fs-5 mb-1">Description</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur magna euismod, bibendum velit sit amet, condimentum nibh. In vitae enim felis. Cras id commodo diam, non commodo mi. Ut dignissim feugiat dui vel venenatis. Donec rutrum molestie rutrum. Cras eu rhoncus magna. Duis vitae efficitur erat, nec imperdiet lectus.</p>
+                                                <h4 class="fs-5 mb-1 mt-4">Links</h4>
+                                                <div class="project-links ">
+                                                    <a href="https://github.com/Goferov/restaurant-rater" target="_blank"><i class="fa-brands fa-github text-primary me-2"></i> See on github</a>
+                                                </div>
+                                                <h4 class="fs-5 mb-1 mt-4">Technologies</h4>
+                                                <div class="project-tags text-white fw-medium d-flex align-items-center">
+                                                    <span>HTML</span>
+                                                    <span>JS</span>
+                                                    <span>CSS</span>
+                                                    <span>PHP</span>
+                                                    <span>POSTGRESQL</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -269,6 +282,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -294,7 +308,7 @@
                             <a href="#" title="LinkedIn" class="me-4"><i class="fa-brands fa-linkedin-in"></i></a>
                             <a href="#" title="Github"><i class="fa-brands fa-github"></i></a>
                         </div>
-                        <a href="#contact" title="Download CV" class="btn btn-primary my-4 d-flex align-items-center px-5">Download CV <i class="fa-solid fa-download ms-2 fs-5"></i></a>
+                        <a download="" target="_blank" href="assets/pdf/Marcin-Godfryd-CV.pdf" title="Download CV" class="btn btn-primary my-4 d-flex align-items-center px-5">Download CV <i class="fa-solid fa-download ms-2 fs-5"></i></a>
                     </div>
                     <div class="col-lg-5">
                         <form method="post" action="/" class="form-wrapper bg-white p-5">

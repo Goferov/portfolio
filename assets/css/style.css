@@ -25,6 +25,10 @@ a:hover {
   height: 100vh;
 }
 
+.fancybox-stage {
+  z-index: 10000s;
+}
+
 section {
   display: flex;
   align-items: center;
@@ -132,6 +136,7 @@ section:nth-of-type(even) {
   padding: 1rem;
   text-align: center;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 .skills-list div i {
   font-size: 4rem;
@@ -142,16 +147,26 @@ section:nth-of-type(even) {
   font-weight: bold;
   margin-bottom: 0;
 }
+.skills-list div:hover {
+  transform: scale(1.1);
+}
+.skills-list div i {
+  transition: color 0.3s ease;
+}
+.skills-list div p {
+  margin-top: 10px;
+  font-size: 1rem;
+}
 .skills .switch {
   color: var(--godfryd-graydark);
 }
-.skills .switch.active, .skills .switch:hover {
+.skills .switch:not(.collapsed), .skills .switch:hover {
   color: var(--godfryd-black);
 }
 .skills .switch .fa-chevron-down {
   transition: transform 0.3s ease;
 }
-.skills .switch.active .fa-chevron-down {
+.skills .switch:not(.collapsed) .fa-chevron-down {
   transform: rotate(180deg);
 }
 
@@ -206,6 +221,17 @@ section:nth-of-type(even) {
 }
 .project-tags span:last-of-type {
   margin-right: 0;
+}
+.project-gallery a {
+  display: block;
+  height: 90px;
+}
+.project-gallery > a {
+  height: 300px;
+}
+.project-gallery img {
+  object-fit: cover;
+  height: 100%;
 }
 
 .project-box {

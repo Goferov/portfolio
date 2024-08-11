@@ -3,20 +3,35 @@
     const sections = document.querySelectorAll('section[id]');
     const offset = document.querySelector('header').offsetHeight;
 
-    function scrollActive(){
+    function scrollActive() {
         const scrollY = window.pageYOffset;
+        const windowHeight = window.innerHeight;
+        let maxVisibleHeight = 0;
+        let mostVisibleSection = null;
 
         sections.forEach(current => {
             const sectionHeight = current.offsetHeight;
-            const sectionTop = current.offsetTop - offset - 1;
+            const sectionTop = current.offsetTop;
+            const sectionBottom = sectionTop + sectionHeight;
             const sectionId = current.getAttribute('id');
 
-            if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                document.querySelector('a[href*=' + sectionId + '].nav-link, .footer-menu a[href*=' + sectionId + ']').classList.add('active');
-            } else {
-                document.querySelector('a[href*=' + sectionId + '].nav-link, .footer-menu a[href*=' + sectionId + ']').classList.remove('active');
+            const visibleTop = Math.max(sectionTop, scrollY);
+            const visibleBottom = Math.min(sectionBottom, scrollY + windowHeight);
+            const visibleHeight = visibleBottom - visibleTop;
+
+            if (visibleHeight > maxVisibleHeight) {
+                maxVisibleHeight = visibleHeight;
+                mostVisibleSection = sectionId;
             }
         });
+
+        if (mostVisibleSection) {
+            document.querySelectorAll('.nav-link, .footer-menu a').forEach(link => {
+                link.classList.remove('active');
+            });
+
+            document.querySelector('a[href*=' + mostVisibleSection + '].nav-link, .footer-menu a[href*=' + mostVisibleSection + ']').classList.add('active');
+        }
     }
 
     window.addEventListener('scroll', scrollActive);
@@ -47,6 +62,9 @@
         });
     });
 
+    Fancybox.bind("[data-fancybox]", {
+        // Your custom options
+    });
 })();
 
 

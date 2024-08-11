@@ -27,6 +27,10 @@ a {
   height: 100vh;
 }
 
+.fancybox-stage {
+  z-index: 10000s;
+}
+
 section {
   display: flex;
   align-items: center;
@@ -132,6 +136,7 @@ section {
       transition: .4s ease-out;
     }
 
+
     &:hover:before,
     &.active:before {
       right: 5px;
@@ -154,6 +159,7 @@ section {
       padding: 1rem;
       text-align: center;
       cursor: pointer;
+      transition: transform 0.3s ease;
 
       i {
         font-size: 4rem;
@@ -165,24 +171,36 @@ section {
         font-weight: bold;
         margin-bottom: 0;
       }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      i {
+        transition: color 0.3s ease;
+      }
+
+      p {
+        margin-top: 10px;
+        font-size: 1rem;
+      }
     }
   }
 
   .switch {
     color: var(--godfryd-graydark);
 
-    &.active, &:hover {
+    &:not(.collapsed), &:hover {
       color: var(--godfryd-black);
     }
+
     .fa-chevron-down {
       transition: transform .3s ease;
     }
-    &.active {
-      .fa-chevron-down {
-        transform: rotate(180deg);
-      }
-    }
 
+    &:not(.collapsed) .fa-chevron-down {
+      transform: rotate(180deg);
+    }
   }
 }
 
@@ -260,6 +278,23 @@ section {
 
     }
   }
+
+  &-gallery {
+    a {
+      display: block;
+      height: 90px;
+    }
+
+    > a {
+      height: 300px;
+    }
+
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+
 }
 
 .project-box {
