@@ -5,8 +5,6 @@ $enable-negative-margins: true;
 $enable-shadows: true;
 
 $primary: #2196F3;
-$primary-subtle: #F9CEAC;
-$primary-subtle-dark: #F3A66D;
 $graylight: #EBEBEB;
 $graydark: #767676;
 $gray: #969696;
@@ -27,7 +25,6 @@ $theme-colors: map-merge($theme-colors, (
 
 :root{
   --godfryd-primary: #{$primary};
-  --godfryd-primary-subtle: #{$primary-subtle};
   --godfryd-white: #FFFFFF;
   --godfryd-graylight: #{$graylight};
   --godfryd-graydark: #{$graydark};
@@ -42,20 +39,20 @@ $theme-colors: map-merge($theme-colors, (
   --fancybox-zIndex: 1000000;
 }
 
+
+//body.dark-mode {
+//  --bs-body-bg: #121212;
+//  --bs-body-color: #f8f9fa;
+//  --bs-primary: #1e90ff;
+//  --bs-secondary: #adb5bd;
+//}
+
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1{
   line-height: 1.4;
 }
 
 .row{
   flex: 1;
-}
-
-.text-primary-subtle{
-  color: $primary-subtle;
-}
-
-.text-primary-subtle-dark{
-  color: $primary-subtle-dark;
 }
 
 .modal {
@@ -107,7 +104,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1{
   --bs-btn-active-bg: var(--godfryd-black);
   --bs-btn-border-hover-color: var(--godfryd-black);
   --bs-btn-focus-shadow-rgb: 211, 211, 211;
-  --bs-btn-active-shadow: inset 0 3px 5px var(--godfryd-primary);
+  --bs-btn-active-shadow: none;
 }
 
 .btn-secondary {
@@ -149,7 +146,6 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1{
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: var(--godfryd-black);
   --bs-btn-active-border-color: var(--godfryd-primary);
-  --bs-btn-active-shadow: inset 0 3px 5px var(--godfryd-primary-subtle);
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: var(--godfryd-black);
   --bs-btn-disabled-border-color: var(--godfryd-black);

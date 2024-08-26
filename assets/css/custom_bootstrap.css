@@ -12698,7 +12698,6 @@ textarea.form-control-lg {
 }
 :root {
   --godfryd-primary: #2196F3;
-  --godfryd-primary-subtle: #F9CEAC;
   --godfryd-white: #FFFFFF;
   --godfryd-graylight: #EBEBEB;
   --godfryd-graydark: #767676;
@@ -12717,14 +12716,6 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 
 .row {
   flex: 1;
-}
-
-.text-primary-subtle {
-  color: #F9CEAC;
-}
-
-.text-primary-subtle-dark {
-  color: #F3A66D;
 }
 
 .modal {
@@ -12776,7 +12767,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   --bs-btn-active-bg: var(--godfryd-black);
   --bs-btn-border-hover-color: var(--godfryd-black);
   --bs-btn-focus-shadow-rgb: 211, 211, 211;
-  --bs-btn-active-shadow: inset 0 3px 5px var(--godfryd-primary);
+  --bs-btn-active-shadow: none;
 }
 
 .btn-secondary {
@@ -12817,7 +12808,6 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: var(--godfryd-black);
   --bs-btn-active-border-color: var(--godfryd-primary);
-  --bs-btn-active-shadow: inset 0 3px 5px var(--godfryd-primary-subtle);
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: var(--godfryd-black);
   --bs-btn-disabled-border-color: var(--godfryd-black);

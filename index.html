@@ -22,7 +22,7 @@
 </head>
 <body>
     <header class="navbar-light bg-secondary py-2 border-bottom border-gray">
-        <div class="container container-xxl">
+        <div class="container-xxl">
             <div class="row">
                 <div class="d-flex align-items-center justify-content-start col-6">
                     <a href="#" class="f-bebas-neue navbar-brand">
@@ -56,21 +56,27 @@
             </div>
         </div>
     </header>
-    <nav id="mobileNav" class="d-block d-lg-none navbar navbar-expand">
-        <ul class="navbar-nav gap-3 gap-xl-5 align-items-center d-flex flex-column">
-            <li class="nav-item">
+    <nav id="mobileNav" class="d-block d-lg-none navbar navbar-expand ">
+
+        <ul class="navbar-nav gap-4 align-items-end d-flex flex-column pt-3 ">
+            <li id="menuClose" class="hamburger align-self-end pe-3 pt-0 active d-block d-lg-none hamburger-squeeze js-hamburger">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </li>
+            <li class="nav-item px-3">
                 <a class="nav-link text-nowrap active scroll-link" href="#home">Home</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item px-3">
                 <a class="nav-link text-nowrap scroll-link" href="#about-me">About me</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item px-3">
                 <a class="nav-link text-nowrap scroll-link" href="#skills">Skills</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item px-3">
                 <a class="nav-link text-nowrap scroll-link" href="#projects">Projects</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item px-3">
                 <a class="nav-link text-nowrap scroll-link" href="#contact">Contact</a>
             </li>
         </ul>
@@ -134,10 +140,10 @@
                     <h2 class="section-title">Skills</h2>
                     <div class="col-lg-5 mb-5 mb-lg-0">
                         <h3 class="text-center mb-5">
-                            <a href="#frontend-skills" class="switch" aria-expanded="false" aria-controls="frontend-skills">
+                            <div>
                                 <i class="fa-solid fa-code"></i>
                                 Frontend Developer
-                            </a>
+                            </div>
                         </h3>
                         <div class="skills-list" id="frontend-skills">
                             <div>
@@ -180,10 +186,10 @@
 
                     <div class="col-lg-5">
                         <h3 class="text-center mb-5">
-                            <a href="#backend-skills" class="switch">
+                            <div>
                                 <i class="fa-solid fa-server"></i>
                                 Backend Developer
-                            </a>
+                            </div>
                         </h3>
                         <div class="skills-list" id="backend-skills">
                             <div>

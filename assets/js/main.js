@@ -3,6 +3,7 @@
     const sections = document.querySelectorAll('section[id]');
     const offset = document.querySelector('header').offsetHeight;
     const menuToggle = document.querySelector('#menuToggle');
+    const menuClose = document.querySelector('#menuClose');
     const mobileNav = document.querySelector('#mobileNav');
 
     function scrollActive() {
@@ -32,7 +33,9 @@
                 link.classList.remove('active');
             });
 
-            document.querySelector('a[href*=' + mostVisibleSection + '].nav-link, .footer-menu a[href*=' + mostVisibleSection + ']').classList.add('active');
+            document.querySelectorAll('a[href*=' + mostVisibleSection + '].nav-link, .footer-menu a[href*=' + mostVisibleSection + ']').forEach(link => {
+                link.classList.add('active')
+            });
         }
     }
 
@@ -65,11 +68,12 @@
     });
 
     function toggleMenu() {
-        menuToggle.classList.toggle('active');
+        // menuToggle.classList.toggle('active');
         mobileNav.classList.toggle('active')
     }
 
     menuToggle.addEventListener('click', toggleMenu);
+    menuClose.addEventListener('click', toggleMenu);
 
     Fancybox.bind("[data-fancybox]");
 

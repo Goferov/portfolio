@@ -13,8 +13,6 @@ $technologies: (
 );
 
 
-
-
 $images: (
         "CodeIgniter": brightness(0) saturate(100%) invert(46%) sepia(80%) saturate(2685%) hue-rotate(4deg) brightness(93%) contrast(103%),
         "MySQL": brightness(0) saturate(100%) invert(61%) sepia(12%) saturate(3865%) hue-rotate(181deg) brightness(99%) contrast(91%)
@@ -26,6 +24,8 @@ body{
   font-optical-sizing: auto;
   font-style: normal;
   line-height: 1.4;
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
 }
 
 .f-bebas-neue {
@@ -158,24 +158,32 @@ section {
       transition: .4s ease-out;
     }
 
+    &:focus {
+      color: var(--bs-nav-link-color);
+    }
 
-    &:hover:before,
-    &.active:before {
-      right: 5px;
+    &:hover,
+    &.active {
+      color: var(--bs-nav-link-hover-color);
+      &:before {
+        right: 5px;
+      }
     }
   }
 }
 
 #mobileNav {
   position: fixed;
-  width: 100%;
-  z-index: 100;
+  width: 60%;
   background-color: var(--godfryd-graylight);
-  top: -100%;
+  top: 0;
+  z-index: 1000;
+  right: -100%;
+  height: 100%;
   transition: .5s ease;
 
   &.active {
-    top: 62px;
+    right: 0;
   }
 }
 
