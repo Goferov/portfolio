@@ -2,6 +2,8 @@
 
     const sections = document.querySelectorAll('section[id]');
     const offset = document.querySelector('header').offsetHeight;
+    const menuToggle = document.querySelector('#menuToggle');
+    const mobileNav = document.querySelector('#mobileNav');
 
     function scrollActive() {
         const scrollY = window.pageYOffset;
@@ -62,9 +64,17 @@
         });
     });
 
-    Fancybox.bind("[data-fancybox]", {
-        // Your custom options
-    });
+    function toggleMenu() {
+        menuToggle.classList.toggle('active');
+        mobileNav.classList.toggle('active')
+    }
+
+    menuToggle.addEventListener('click', toggleMenu);
+
+    Fancybox.bind("[data-fancybox]");
+
+    scrollUp();
+    scrollActive();
 })();
 
 

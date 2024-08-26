@@ -29,8 +29,13 @@
                         GODFRYD
                     </a>
                 </div>
-                <nav class="col-6 navbar navbar-expand justify-content-end">
-                    <ul class="navbar-nav gap-5 align-items-center ">
+                <nav class="col-6 navbar navbar-expand align-items-center justify-content-end">
+                    <div id="menuToggle" class="hamburger d-block d-lg-none hamburger-squeeze js-hamburger">
+                        <div class="hamburger-box">
+                            <div class="hamburger-inner"></div>
+                        </div>
+                    </div>
+                    <ul class="navbar-nav gap-3 gap-xl-4 align-items-center d-none d-lg-flex">
                         <li class="nav-item">
                             <a class="nav-link text-nowrap active scroll-link" href="#home">Home</a>
                         </li>
@@ -51,30 +56,50 @@
             </div>
         </div>
     </header>
+    <nav id="mobileNav" class="d-block d-lg-none navbar navbar-expand">
+        <ul class="navbar-nav gap-3 gap-xl-5 align-items-center d-flex flex-column">
+            <li class="nav-item">
+                <a class="nav-link text-nowrap active scroll-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-nowrap scroll-link" href="#about-me">About me</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-nowrap scroll-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-nowrap scroll-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-nowrap scroll-link" href="#contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
     <main>
         <section id="home" class="py-5 position-relative h-100vh pt-10">
             <div class="container container-xxl">
                 <div class="row">
-                    <div class="col-lg-6">
-                        <div class="avatar position-relative ">
+                    <div class="col-lg-6 mt-5 mt-lg-0 pt-5 pt-lg-0 mb-5 mb-lg-0">
+                        <h1 class="f-bebas-neue my-3 text-center d-block d-lg-none">Marcin Godfryd</h1>
+                        <div class="avatar position-relative mx-auto mx-lg-0">
                             <div></div>
                             <img src="assets/img/avatar.jpg" alt="Marcin Godfryd - a website developer" class="object-fit-cover position-relative img-fluid z-1"/>
                         </div>
                     </div>
                     <div class="col-lg-6 fs-4 d-flex flex-column justify-content-center align-items-start">
-                        <h1 class="f-bebas-neue my-3">Marcin Godfryd</h1>
-                        <hr class="w-25 border-dark border-2 opacity-100">
-                        <div class="my-3">
+                        <h1 class="f-bebas-neue my-3 d-none d-lg-block">Marcin Godfryd</h1>
+                        <hr class="w-25 border-dark border-2 opacity-100 d-none d-lg-block">
+                        <div class="my-3 text-center text-lg-start">
                             <b>A website developer</b>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus eros eget felis molestie, id eleifend mauris tempus.
                         </div>
-                        <a href="#contact" title="Contact" class="btn btn-primary my-3 scroll-link">Contact</a>
-                        <div class="socials my-3">
+                        <a href="#contact" title="Contact" class="btn btn-primary my-3 scroll-link mx-auto mx-lg-0">Contact</a>
+                        <div class="socials my-3 mx-auto mx-lg-0">
                             <a href="#" title="LinkedIn" class="me-3"><i class="fa-brands fa-linkedin-in"></i></a>
                             <a href="#" title="Github"><i class="fa-brands fa-github"></i></a>
                         </div>
                     </div>
                 </div>
-                <a href="#about-me" class="scroll-down scroll-link fs-5 position-absolute fw-medium">
+                <a href="#about-me" class="scroll-down scroll-link fs-5 position-absolute fw-medium d-none d-lg-flex">
                     <i class="fa-solid fa-arrow-down"></i>
                     Show more
                 </a>
@@ -84,7 +109,7 @@
             <div class="container container-xxl">
                 <div class="row justify-content-around">
                     <h2 class="section-title">About me</h2>
-                    <div class="col-lg-5 fs-4 d-flex flex-column justify-content-center align-items-start">
+                    <div class="col-lg-5 fs-4 d-flex flex-column justify-content-center align-items-start mb-5 mb-lg-0">
                         <div class="my-3 text">
                             <p>
                                 I'm a Frontend Focused Web Developer building and managing the Front-end of Websites and Web Applications that leads to the success of the overall product. Check out some of my work in the Projects section.
@@ -93,7 +118,7 @@
                                 I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.
                             </p>
                         </div>
-                        <a download="" target="_blank" href="assets/pdf/Marcin-Godfryd-CV.pdf" title="Download CV" class="btn btn-primary my-3 d-flex align-items-center px-5">Download CV <i class="fa-solid fa-download ms-2 fs-5"></i></a>
+                        <a download="" target="_blank" href="assets/pdf/Marcin-Godfryd-CV.pdf" title="Download CV" class="btn btn-primary my-3 d-flex align-items-center px-5 mx-auto mx-lg-0">Download CV <i class="fa-solid fa-download ms-2 fs-5"></i></a>
                     </div>
                     <div class="col-lg-5">
                         <div class="w-100 position-relative ">
@@ -107,96 +132,119 @@
             <div class="container container-xxl">
                 <div class="row justify-content-between skills">
                     <h2 class="section-title">Skills</h2>
-                    <div class="col-lg-5 ">
+                    <div class="col-lg-5 mb-5 mb-lg-0">
                         <h3 class="text-center mb-5">
-                            <a href="#frontend-skills" data-bs-toggle="collapse" class="switch collapsed" aria-expanded="false" aria-controls="frontend-skills">
+                            <a href="#frontend-skills" class="switch" aria-expanded="false" aria-controls="frontend-skills">
                                 <i class="fa-solid fa-code"></i>
                                 Frontend Developer
-                                <i class="fa-solid fa-chevron-down"></i>
                             </a>
                         </h3>
-                        <div class="skills-list collapse" id="frontend-skills">
+                        <div class="skills-list" id="frontend-skills">
                             <div>
-                                <i class="fa-brands fa-html5"></i>
-                                <p>HTML</p>
+                                <div class="content">
+                                    <i class="fa-brands fa-html5"></i>
+                                    <p>HTML</p>
+                                </div>
+                                <p class="rate">Advanced</p>
                             </div>
                             <div>
-                                <i class="fa-brands fa-css3-alt"></i>
-                                <p>CSS</p>
+                                <div class="content">
+                                    <i class="fa-brands fa-css3-alt"></i>
+                                    <p>CSS</p>
+                                </div>
+                                <p class="rate">Advanced</p>
                             </div>
                             <div>
-                                <i class="fa-brands fa-js"></i>
-                                <p>JS</p>
+                                <div class="content">
+                                    <i class="fa-brands fa-js"></i>
+                                    <p>JavaScript</p>
+                                </div>
+                                <p class="rate">Advanced</p>
                             </div>
                             <div>
-                                <i class="fa-brands fa-react"></i>
-                                <p>React</p>
+                                <div class="content">
+                                    <i class="fa-brands fa-sass"></i>
+                                    <p>SASS</p>
+                                </div>
+                                <p class="rate">Intermediate</p>
                             </div>
                             <div>
-                                <i class="fa-brands fa-vuejs"></i>
-                                <p>Vue</p>
-                            </div>
-                            <div>
-                                <i class="fa-brands fa-angular"></i>
-                                <p>Angular</p>
-                            </div>
-                            <div>
-                                <i class="fa-brands fa-sass"></i>
-                                <p>Sass/SCSS</p>
-                            </div>
-                            <div>
-                                <i class="fa-brands fa-bootstrap"></i>
-                                <p>Bootstrap</p>
+                                <div class="content">
+                                    <i class="fa-brands fa-bootstrap"></i>
+                                    <p>Bootstrap</p>
+                                </div>
+                                <p class="rate">Intermediate</p>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-5">
                         <h3 class="text-center mb-5">
-                            <a href="#backend-skills" class="switch collapsed" data-bs-toggle="collapse">
+                            <a href="#backend-skills" class="switch">
                                 <i class="fa-solid fa-server"></i>
                                 Backend Developer
-                                <i class="fa-solid fa-chevron-down"></i>
                             </a>
                         </h3>
-                        <div class="skills-list collapse" id="backend-skills">
+                        <div class="skills-list" id="backend-skills">
                             <div>
-                                <i class="fa-brands fa-node-js"></i>
-                                <p>Node.js</p>
+                                <div class="content">
+                                    <i class="fa-brands fa-php"></i>
+                                    <p>PHP</p>
+                                </div>
+                                <p class="rate">Advanced</p>
                             </div>
                             <div>
-                                <i class="fa-brands fa-js"></i>
-                                <p>Express.js</p>
+                                <div class="content">
+                                    <i class="fa-brands fa-python"></i>
+                                    <p>Python</p>
+                                </div>
+                                <p class="rate">Intermediate</p>
                             </div>
                             <div>
-                                <i class="fa-brands fa-python"></i>
-                                <p>Python</p>
+                                <div class="content">
+                                    <i class="fa-brands fa-java"></i>
+                                    <p>Java</p>
+                                </div>
+                                <p class="rate">Intermediate</p>
                             </div>
                             <div>
-                                <i class="fa-brands fa-java"></i>
-                                <p>Java</p>
+                                <div class="content">
+                                    <i class="fa-brands fa-laravel"></i>
+                                    <p>Laravel</p>
+                                </div>
+                                <p class="rate">Intermediate</p>
                             </div>
                             <div>
-                                <i class="fa-brands fa-php"></i>
-                                <p>PHP</p>
+                                <div class="content">
+                                    <img src="assets/img/codeigniter.svg" alt="CodeIgniter" />
+                                    <p>CodeIgniter</p>
+                                </div>
+                                <p class="rate">Advanced</p>
                             </div>
                             <div>
-                                <i class="fa-brands fa-laravel"></i>
-                                <p>Laravel</p>
+                                <div class="content">
+                                    <img src="assets/img/mysql.svg" alt="MySQL" />
+                                    <p>MySQL</p>
+                                </div>
+                                <p class="rate">Advanced</p>
                             </div>
                             <div>
-                                <i class="fa-solid fa-database"></i>
-                                <p>MySQL</p>
+                                <div class="content">
+                                    <i class="fa-solid fa-leaf"></i>
+                                    <p>MongoDB</p>
+                                </div>
+                                <p class="rate">Beginner</p>
                             </div>
                             <div>
-                                <i class="fa-solid fa-database"></i>
-                                <p>PostgreSQL</p>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-leaf"></i>
-                                <p>MongoDB</p>
+                                <div class="content">
+                                    <i class="fa-brands fa-git-alt"></i>
+                                    <p>GIT</p>
+                                </div>
+                                <p class="rate">Advanced</p>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -291,7 +339,7 @@
             <div class="container container-xxl">
                 <div class="row justify-content-around">
                     <h2 class="section-title">Contact</h2>
-                    <div class="col-lg-5 fs-2 d-flex flex-column justify-content-center align-items-start">
+                    <div class="col-xl-5 col-lg-6 fs-2 d-flex flex-column justify-content-center align-items-center align-items-lg-start mb-5 mb-lg-0">
                         <div class="my-4">
                             <a href="#" title="Call me!">
                                 <i class="fa-solid fa-phone me-4"></i>
@@ -310,7 +358,7 @@
                         </div>
                         <a download="" target="_blank" href="assets/pdf/Marcin-Godfryd-CV.pdf" title="Download CV" class="btn btn-primary my-4 d-flex align-items-center px-5">Download CV <i class="fa-solid fa-download ms-2 fs-5"></i></a>
                     </div>
-                    <div class="col-lg-5">
+                    <div class="col-xl-5 col-lg-6">
                         <form method="post" action="/" class="form-wrapper bg-white p-5">
                             <div class="form-group mb-4">
                                 <label for="name" class="mb-1">Name</label>
@@ -336,7 +384,7 @@
     <footer class="bg-black py-5 text-white">
         <div class="container container-xxl">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 mb-3 mb-lg-0">
                     <div class="d-flex align-items-center justify-content-start col-6">
                         <a href="#" class="f-bebas-neue navbar-brand">
                             GODFRYD
@@ -346,8 +394,8 @@
                         <p class="fw-normal">A website developer</p>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <h6>Contact</h6>
+                <div class="col-lg-4 mb-3 mb-lg-0">
+                    <h6 class="">Contact</h6>
                     <ul class="footer-menu">
                         <li class="my-1">
                             <a href="#" title="Call me!">
@@ -367,8 +415,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-4">
-                    <h6>Menu</h6>
+                <div class="col-lg-4 mb-3 mb-lg-0">
+                    <h6 class="">Menu</h6>
                     <ul class="footer-menu">
                         <li>
                             <a href="#home" class="scroll-link" title="Home">Home</a>
