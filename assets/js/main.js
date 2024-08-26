@@ -6,6 +6,8 @@
     const menuClose = document.querySelector('#menuClose');
     const mobileNav = document.querySelector('#mobileNav');
 
+
+
     function scrollActive() {
         const scrollY = window.pageYOffset;
         const windowHeight = window.innerHeight;
@@ -75,10 +77,35 @@
     menuToggle.addEventListener('click', toggleMenu);
     menuClose.addEventListener('click', toggleMenu);
 
+    function closeMobileMenuAfterClick() {
+        mobileNav.classList.remove('active');
+    }
+
+    mobileNav.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', closeMobileMenuAfterClick);
+    });
+
     Fancybox.bind("[data-fancybox]");
 
     scrollUp();
     scrollActive();
+
+    // SCROLL ANIMATIONS
+    const sr = ScrollReveal({
+        origin: 'top',
+        distance: '30px',
+        duration: 2000,
+        delay: 200,
+    });
+
+    sr.reveal('.from-left', {origin: 'left'});
+    sr.reveal('.from-right', {origin: 'right'});
+    sr.reveal('.section-title ', {origin: 'top', delay: 50});
+    sr.reveal('.skills-list.left > div ', {origin: 'left', interval: 200, delay: 700});
+    sr.reveal('.skills-list.right > div ', {origin: 'right', interval: 200, delay: 700});
+    sr.reveal('.project-list > div ', {origin: 'left', interval: 200, delay: 700});
+
+
 })();
 
 
