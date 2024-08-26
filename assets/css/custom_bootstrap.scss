@@ -5,19 +5,20 @@ $enable-negative-margins: true;
 $enable-shadows: true;
 
 $primary: #2196F3;
-$graylight: #EBEBEB;
+$secondary: #EBEBEB;
 $graydark: #767676;
 $gray: #969696;
 $light: #CCCCCC;
 $dark: #232323;
 
+
 // merge with existing $theme-colors map
 $theme-colors: map-merge($theme-colors, (
         "primary": $primary,
-        "secondary": $graylight,
+        "secondary": $secondary,
         "light": $light,
         "dark": $dark,
-        "gray": $gray
+        "gray": $gray,
 ));
 
 // set changes
@@ -26,11 +27,17 @@ $theme-colors: map-merge($theme-colors, (
 :root{
   --godfryd-primary: #{$primary};
   --godfryd-white: #FFFFFF;
-  --godfryd-graylight: #{$graylight};
+  --godfryd-graylight: #{$secondary};
   --godfryd-graydark: #{$graydark};
   --godfryd-gray: #{$gray};
   --godfryd-light: #{$light};
-  --godfryd-black: #000;
+  --godfryd-black: #141414;
+
+  --odd-section-bg: var(--godfryd-graylight);
+  --even-section-bg: var(--godfryd-white);
+
+  --bs-nav-link-color: var(--godfryd-graydark);
+  --bs-nav-link-hover-color: var(--godfryd-black);
 
   --bs-border-color: #{$light};
   --bs-border-width: 1px;
@@ -40,12 +47,13 @@ $theme-colors: map-merge($theme-colors, (
 }
 
 
-//body.dark-mode {
-//  --bs-body-bg: #121212;
-//  --bs-body-color: #f8f9fa;
-//  --bs-primary: #1e90ff;
-//  --bs-secondary: #adb5bd;
-//}
+body.dark-theme {
+  --bs-body-bg: #{$dark};
+  --bs-body-color: var(--godfryd-white);
+
+  --odd-section-bg: #{$dark};
+  --even-section-bg: var(--godfryd-black);
+}
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1{
   line-height: 1.4;
@@ -60,7 +68,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1{
 }
 
 .bg-graylight{
-  background-color: $graylight;
+  background-color: $secondary;
 }
 
 .btn {

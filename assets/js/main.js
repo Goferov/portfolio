@@ -1,12 +1,36 @@
 (function(){
 
+    const body = document.querySelector('body');
     const sections = document.querySelectorAll('section[id]');
     const offset = document.querySelector('header').offsetHeight;
     const menuToggle = document.querySelector('#menuToggle');
     const menuClose = document.querySelector('#menuClose');
     const mobileNav = document.querySelector('#mobileNav');
+    const changeThemeBtn = document.querySelector('#changeThemeBtn');
+    const themeIcon = changeThemeBtn.querySelector('i');
+    const lightThemeIcon = 'fa-solid fa-sun';
+    const darkThemeIcon = 'fa-solid fa-moon';
 
 
+    function setCookie(name, value, days) {
+        let expires = "";
+        if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+    }
+    function getCookie(name) {
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
+        for(let i=0;i < ca.length;i++) {
+            let c = ca[i];
+            while (c.charAt(0)===' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
 
     function scrollActive() {
         const scrollY = window.pageYOffset;
@@ -85,8 +109,31 @@
         link.addEventListener('click', closeMobileMenuAfterClick);
     });
 
+    function changeTheme() {
+        body.classList.toggle('dark-theme');
+
+        if(body.classList.contains('dark-theme')) {
+            themeIcon.className = lightThemeIcon;
+            setCookie('theme', 'dark-theme', 1);
+        }
+        else {
+            themeIcon.className = darkThemeIcon;
+            setCookie('theme', null, 1);
+        }
+    }
+
+    changeThemeBtn.addEventListener('click', changeTheme);
+
+
+    function setThemeFromCookie() {
+        const theme = getCookie('theme');
+        body.className = getCookie('theme');
+        themeIcon.className = theme ? lightThemeIcon : darkThemeIcon;
+    }
+
     Fancybox.bind("[data-fancybox]");
 
+    setThemeFromCookie();
     scrollUp();
     scrollActive();
 

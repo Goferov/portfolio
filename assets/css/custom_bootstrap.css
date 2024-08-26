@@ -12703,11 +12703,22 @@ textarea.form-control-lg {
   --godfryd-graydark: #767676;
   --godfryd-gray: #969696;
   --godfryd-light: #CCCCCC;
-  --godfryd-black: #000;
+  --godfryd-black: #141414;
+  --odd-section-bg: var(--godfryd-graylight);
+  --even-section-bg: var(--godfryd-white);
+  --bs-nav-link-color: var(--godfryd-graydark);
+  --bs-nav-link-hover-color: var(--godfryd-black);
   --bs-border-color: #CCCCCC;
   --bs-border-width: 1px;
   --placeholder-color: #A1A1A1;
   --fancybox-zIndex: 1000000;
+}
+
+body.dark-theme {
+  --bs-body-bg: #232323;
+  --bs-body-color: var(--godfryd-white);
+  --odd-section-bg: #232323;
+  --even-section-bg: var(--godfryd-black);
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {

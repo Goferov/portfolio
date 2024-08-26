@@ -41,13 +41,19 @@ header {
   width: 100%;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 0 0.5em var(--godfryd-graydark);
+}
+
+#changeThemeBtn {
+  min-width: 40px;
+  text-align: center;
 }
 
 section:nth-of-type(odd) {
-  background-color: var(--godfryd-graylight);
+  background-color: var(--odd-section-bg);
 }
 section:nth-of-type(even) {
-  background-color: var(--godfryd-white);
+  background-color: var(--even-section-bg);
 }
 
 .section-title {
@@ -122,6 +128,9 @@ section:nth-of-type(even) {
   height: 2px;
   background-color: var(--godfryd-primary);
   transition: 0.4s ease-out;
+}
+.navbar .nav-link#changeThemeBtn:before {
+  display: none;
 }
 .navbar .nav-link:focus {
   color: var(--bs-nav-link-color);
