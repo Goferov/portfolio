@@ -12704,12 +12704,16 @@ textarea.form-control-lg {
   --godfryd-gray: #969696;
   --godfryd-light: #CCCCCC;
   --godfryd-black: #141414;
+  --header-bg: var(--godfryd-graylight);
   --odd-section-bg: var(--godfryd-graylight);
   --even-section-bg: var(--godfryd-white);
-  --bs-nav-link-color: var(--godfryd-graydark);
-  --bs-nav-link-hover-color: var(--godfryd-black);
   --bs-border-color: #CCCCCC;
   --bs-border-width: 1px;
+  --skill-bg: var(--godfryd-white);
+  --skill-color: var(--godfryd-black);
+  --contact-bg: var(--godfryd-white);
+  --input-bg: var(--godfryd-graylight);
+  --input-color: var(--godfryd-gray);
   --placeholder-color: #A1A1A1;
   --fancybox-zIndex: 1000000;
 }
@@ -12717,8 +12721,14 @@ textarea.form-control-lg {
 body.dark-theme {
   --bs-body-bg: #232323;
   --bs-body-color: var(--godfryd-white);
+  --header-bg: #232323;
   --odd-section-bg: #232323;
   --even-section-bg: var(--godfryd-black);
+  --skill-bg: var(--godfryd-black);
+  --skill-color: var(--godfryd-white);
+  --contact-bg: var(--godfryd-black);
+  --input-bg: #232323;
+  --input-color: var(--godfryd-white);
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
@@ -12843,7 +12853,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 }
 .form-select {
   --bs-box-shadow-inset: none;
-  color: var(--godfryd-graydark);
+  color: var(--input-color);
 }
 .form-select:focus {
   border-color: var(--godfryd-primary);
@@ -12851,7 +12861,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 }
 .form-control {
   --bs-box-shadow-inset: none;
-  color: var(--godfryd-graydark);
+  color: var(--input-color);
 }
 .form-control:focus {
   border-color: var(--godfryd-primary);
@@ -12870,10 +12880,6 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   font-size: 18px;
 }
 
-.w-33 {
-  width: 33.33% !important;
-}
-
 @media screen and (min-width: 1200px) {
   .display-1 {
     font-size: 6rem;
@@ -12887,11 +12893,6 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 @media (min-width: 1500px) {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1500px;
-  }
-}
-@media (min-width: 1230px) {
-  .container-smaller {
-    max-width: 1230px;
   }
 }
 

@@ -42,6 +42,7 @@ header {
   top: 0;
   z-index: 1000;
   box-shadow: 0 0 0.5em var(--godfryd-graydark);
+  background-color: var(--header-bg);
 }
 
 #changeThemeBtn {
@@ -112,8 +113,8 @@ section:nth-of-type(even) {
   --bs-nav-link-font-weight: 500;
 }
 .navbar-nav {
-  --bs-nav-link-color: var(--godfryd-graydark);
-  --bs-nav-link-hover-color: var(--godfryd-black);
+  --bs-nav-link-color: var(--godfryd-gray);
+  --bs-nav-link-hover-color: var(--bs-body-color);
 }
 .navbar .nav-link {
   position: relative;
@@ -274,8 +275,8 @@ section:nth-of-type(even) {
   }
 }
 .skills-list > div {
-  background-color: var(--godfryd-white);
-  color: var(--godfryd-black);
+  background-color: var(--skill-bg);
+  color: var(--skill-color);
   padding: 1rem;
   text-align: center;
   cursor: pointer;
@@ -375,12 +376,13 @@ section:nth-of-type(even) {
 }
 
 .form-wrapper {
-  --bs-border-color: var(--godfryd-gray);
-  --bs-body-bg: var(--godfryd-graylight);
+  --bs-border-color: var(--input-color);
+  --bs-body-bg: var(--input-bg);
   --bs-border-radius: 0;
   -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background-color: var(--contact-bg);
 }
 .form-wrapper label {
   font-size: 14px;
