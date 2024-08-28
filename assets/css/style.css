@@ -314,6 +314,12 @@ section:nth-of-type(even) {
 .skills-list > div:hover i.fa-git-alt {
   color: #f05032;
 }
+.skills-list > div:hover i.fa-wordpress {
+  color: #21759b;
+}
+.skills-list > div:hover i.fa-docker {
+  color: #0db7ed;
+}
 .skills-list > div:hover i.fa-leaf {
   color: #47a248;
 }
@@ -322,6 +328,9 @@ section:nth-of-type(even) {
 }
 .skills-list > div:hover img[alt=MySQL], .skills-list > div:hover svg#MySQL {
   fill: #00758f;
+}
+.skills-list > div:hover img[alt=jQuery], .skills-list > div:hover svg#jQuery {
+  fill: #0769ad;
 }
 .skills-list > div img, .skills-list > div svg {
   width: 100%;
