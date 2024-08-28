@@ -12705,6 +12705,7 @@ textarea.form-control-lg {
   --godfryd-light: #CCCCCC;
   --godfryd-black: #141414;
   --header-bg: var(--godfryd-graylight);
+  --hamburger-bg: var(--godfryd-black);
   --odd-section-bg: var(--godfryd-graylight);
   --even-section-bg: var(--godfryd-white);
   --bs-border-color: #CCCCCC;
@@ -12722,6 +12723,7 @@ body.dark-theme {
   --bs-body-bg: #232323;
   --bs-body-color: var(--godfryd-white);
   --header-bg: #232323;
+  --hamburger-bg: var(--godfryd-white);
   --odd-section-bg: #232323;
   --even-section-bg: var(--godfryd-black);
   --skill-bg: var(--godfryd-black);

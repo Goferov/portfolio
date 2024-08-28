@@ -6,8 +6,8 @@
     const menuToggle = document.querySelector('#menuToggle');
     const menuClose = document.querySelector('#menuClose');
     const mobileNav = document.querySelector('#mobileNav');
-    const changeThemeBtn = document.querySelector('#changeThemeBtn');
-    const themeIcon = changeThemeBtn.querySelector('i');
+    const changeThemeBtn = document.querySelectorAll('.changeThemeBtn');
+    const themeIcons = document.querySelectorAll('.changeThemeBtn i');
     const lightThemeIcon = 'fa-solid fa-sun';
     const darkThemeIcon = 'fa-solid fa-moon';
 
@@ -111,25 +111,35 @@
 
     function changeTheme() {
         body.classList.toggle('dark-theme');
+        let theme = null;
 
         if(body.classList.contains('dark-theme')) {
-            themeIcon.className = lightThemeIcon;
-            setCookie('theme', 'dark-theme', 1);
+            theme = 'dark-theme';
         }
-        else {
-            themeIcon.className = darkThemeIcon;
-            setCookie('theme', null, 1);
-        }
+
+        setCookie('theme', theme, 1);
+        changeThemeIcons(theme);
+
     }
 
-    changeThemeBtn.addEventListener('click', changeTheme);
+    changeThemeBtn.forEach(btn => {
+        btn.addEventListener('click', changeTheme);
+    })
 
 
     function setThemeFromCookie() {
         const theme = getCookie('theme');
-        body.className = getCookie('theme');
-        themeIcon.className = theme ? lightThemeIcon : darkThemeIcon;
+        body.className = theme;
+
+        changeThemeIcons(theme);
     }
+
+    function changeThemeIcons(theme) {
+        themeIcons.forEach(icon => {
+            icon.className = theme ? lightThemeIcon : darkThemeIcon;
+        });
+    }
+
 
     Fancybox.bind("[data-fancybox]");
 
