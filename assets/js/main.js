@@ -141,6 +141,7 @@
     }
 
 
+
     Fancybox.bind("[data-fancybox]");
 
     setThemeFromCookie();

@@ -404,7 +404,7 @@
                         <a download="" target="_blank" href="assets/pdf/Marcin-Godfryd-CV.pdf" title="Download CV" class="btn btn-primary my-4 d-flex align-items-center px-5">Download CV <i class="fa-solid fa-download ms-2 fs-5"></i></a>
                     </div>
                     <div class="col-xl-5 col-lg-6 from-right">
-                        <form method="post" action="/" class="form-wrapper p-3 p-sm-5">
+                        <form id="contactForm" method="post" action="/sendMail.php" class="form-wrapper p-3 p-sm-5">
                             <div class="form-group mb-4">
                                 <label for="name" class="mb-1">Name</label>
                                 <input id="name" type="text" name="name" class="form-control" placeholder="Enter Your Name">
@@ -418,7 +418,8 @@
                                 <textarea id="message" name="message" class="form-control" rows="10" placeholder="Enter Your Message"></textarea>
                             </div>
                             <div class="form-group ">
-                                <button title="Send" class="btn fs-6 btn-primary px-5 d-flex align-items-center ms-auto">Send <i class="fa-solid fa-envelope ms-2 "></i></button>
+                                <input type="hidden" name="g-recaptcha-response" class="g-recaptcha-response" value="">
+                                <button title="Send" class="btn fs-6 btn-primary px-5 d-flex align-items-center ms-auto g-recaptcha">Send <i class="fa-solid fa-envelope ms-2 "></i></button>
                             </div>
                         </form>
                     </div>
@@ -489,6 +490,12 @@
 
     <!-- Scroll Reveal -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js" integrity="sha512-Kr+RPfLjQ71E0cJ9nseJ6jwTrnmMnuSPnnsVQQ/ZYYCjOHKfJcWj8ILICXnvf9A7ZQChNzIbr9x/ZAxA6xAZlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Recaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfA_TIqAAAAAFV1XknwAETlaOYYTVhWhhpiWVog"></script>
+
+    <!-- sendMail.js -->
+    <script src="assets/js/sendMail.js"></script>
 
     <!-- Main.js -->
     <script src="assets/js/main.js"></script>
