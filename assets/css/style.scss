@@ -70,6 +70,10 @@ header {
   background-color: var(--header-bg);
 }
 
+.grecaptcha-badge {
+  display: none;
+}
+
 .changeThemeBtn {
   min-width: 40px;
   text-align: center;
@@ -113,19 +117,51 @@ section {
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background-color: var(--godfryd-primary);
+  color: var(--godfryd-white);
+  font-size: 22px;
+  margin-right: 14px;
+  overflow: hidden;
 
   i {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    background-color: var(--godfryd-primary);
-    color: var(--godfryd-white);
-    font-size: 22px;
-    margin-right: 14px;
+    animation: arrow-animation 6s ease-in-out infinite;  animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+
+
+    &:hover {
+      color: var(--godfryd-white);
+    }
   }
 }
+
+
+@keyframes arrow-animation {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateY(38px);
+    opacity: 0;
+  }
+  35% {
+    transform: translateY(-38px);
+    opacity: 0;
+  }
+  65% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 
 
 // AVATAR
