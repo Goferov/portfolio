@@ -49,6 +49,8 @@ $theme-colors: map-merge($theme-colors, (
   --input-bg: var(--godfryd-graylight);
   --input-color: var(--godfryd-black);
 
+  --border-title-color: var(--godfryd-black);
+
   --placeholder-color: #A1A1A1;
   --fancybox-zIndex: 1000000;
 
@@ -67,6 +69,8 @@ body.dark-theme {
 
   --skill-bg: var(--godfryd-black);
   --skill-color: var(--godfryd-white);
+
+  --border-title-color: var(--godfryd-white);
 
   --contact-bg: var(--godfryd-black);
   --input-bg: #{$dark};

@@ -79,6 +79,10 @@ header {
   text-align: center;
 }
 
+.border-title {
+  border-color: var(--border-title-color);
+}
+
 section {
   &:nth-of-type(odd) {
     background-color: var(--odd-section-bg);
