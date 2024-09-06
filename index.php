@@ -1,3 +1,63 @@
+<?php
+
+$projects = [
+    [
+        "title" => "Restaurant Rater",
+        "description" => "Restaurant Rater to aplikacja, która pozwala użytkownikom oceniać i recenzować restauracje, obsługując zarówno zwykłych użytkowników, jak i administratorów z różnymi uprawnieniami. Posiada funkcję rejestracji użytkowników i oferuje możliwość wyszukiwania i sortowania ofert restauracji w oparciu o różne kryteria, zwiększając komfort użytkowania.",
+        "main_image" => "assets/img/projects/restaurant-rater/project.png",
+        "images" => [
+            "assets/img/projects/restaurant-rater/login.png",
+            "assets/img/projects/restaurant-rater/list.png",
+            "assets/img/projects/restaurant-rater/details.png"
+        ],
+        "github_link" => "https://github.com/Goferov/restaurant-rater",
+        "technologies" => ["HTML", "JS", "CSS", "PHP", "POSTGRESQL", "DOCKER"]
+    ],
+
+    [
+        "title" => "Notes",
+        "description" => "Jest to projekt aplikacji internetowej do zarządzania notatkami. Projekt jest zbudowany przy użyciu PHP z obiektową architekturą MVC (Model-View-Controller). Zawiera również obsługę błędów.",
+        "main_image" => "assets/img/projects/notes/notes_list.png",
+        "images" => [
+            "assets/img/projects/notes/add_note.png",
+            "assets/img/projects/notes/delete_note.png",
+            "assets/img/projects/notes/show_note.png"
+        ],
+        "github_link" => "https://github.com/Goferov/notes",
+        "technologies" => ["HTML", "CSS", "PHP", "MYSQL"]
+    ],
+
+    [
+        "title" => "Order Management System",
+        "description" => "Jest to oparta na Javie aplikacja desktopowa przeznaczona do zarządzania zamówieniami w sklepie. Aplikacja zapewnia funkcjonalność zarządzania klientami, produktami i zamówieniami za pośrednictwem graficznego interfejsu użytkownika (GUI) opracowanego przy użyciu frameworka Swing. Aplikacja jest zbudowana wokół wzorca projektowego MVC (Model-View-Controller) i jest zbudowana z naciskiem na rozszerzalność i łatwość konserwacji.",
+        "main_image" => "assets/img/projects/order-management-system/img.png",
+        "images" => [
+            "assets/img/projects/order-management-system/img_1.png",
+            "assets/img/projects/order-management-system/img_2.png",
+            "assets/img/projects/order-management-system/img_6.png"
+        ],
+        "github_link" => "https://github.com/Goferov/shop-orders-java-app",
+        "technologies" => ["JAVA", "SWING"]
+    ],
+    [
+        "title" => "Game Rater",
+        "description" => "Ta aplikacja internetowa została zaprojektowana, aby zapewnić użytkownikom kompleksowy sposób odkrywania i recenzowania gier. Oferuje szeroki zakres funkcji, w tym zarządzanie kontem użytkownika, eksplorację katalogu gier, spersonalizowane listy gier i szczegółowe statystyki gier. Platforma została zbudowana w oparciu o framework Laravel, zgodnie z architekturą MVC i wzorcem projektowym Repository.",
+        "main_image" => "assets/img/projects/game-rater/dashboard.png",
+        "images" => [
+            "assets/img/projects/game-rater/login.png",
+            "assets/img/projects/game-rater/list.png",
+            "assets/img/projects/game-rater/details.png"
+        ],
+        "github_link" => "https://github.com/Goferov/game-rater",
+        "technologies" => ["PHP", "JS", 'SCSS', 'LARAVEL', 'SQL']
+    ],
+];
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +100,7 @@
                 </div>
                 <nav class="col-6 navbar navbar-expand align-items-center justify-content-end">
                     <div class="fs-2 d-block d-lg-none me-4">
-                        <div class=" changeThemeBtn"><i class="fa-solid fa-moon"></i></div>
+                        <div class="changeThemeBtn"><i class="fa-solid fa-moon"></i></div>
                     </div>
                     <div id="menuToggle" class="hamburger d-block d-lg-none hamburger-squeeze js-hamburger">
                         <div class="hamburger-box">
@@ -334,7 +394,7 @@
                                 Edukacja
                             </div>
                         </h3>
-                        <div class="timeline mx-auto border-2 border-start border-primary">
+                        <div class="timeline mx-lg-auto mx-0 border-2 border-start border-primary">
                             <div class="position-relative ps-4">
                                 <h3 class="mb-3 fw-semibold fs-4">Politechnika Krakowska</h3>
                                 <p class="mb-2  "><i class="fa-sharp fa-regular fa-calendar-days"></i> 2021 - 2025</p>
@@ -356,7 +416,7 @@
                                 Praca
                             </div>
                         </h3>
-                        <div class="timeline mx-auto border-2 border-start border-primary">
+                        <div class="timeline mx-lg-auto mx-0 border-2 border-start border-primary">
                             <div class="position-relative ps-4">
                                 <h3 class="mb-3 fw-semibold fs-4">InnWeb.pl</h3>
                                 <p class="mb-2  "><i class="fa-sharp fa-regular fa-calendar-days"></i> 2021 - obecnie</p>
@@ -379,62 +439,70 @@
                 <div class="row ">
                     <h2 class="section-title">Projekty</h2>
                     <div class="project-list">
-                        <div data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                            <div class="project-box position-relative overflow-hidden">
-                                <img src="assets/img/projects/restaurant-rater/project.png" alt="" class="w-100"/>
-                                <div class="overlay text-white fs-5 text-center position-absolute top-0 start-0 bottom-0 end-0 d-flex flex-column justify-content-center align-items-center">
-                                    <h3 class="fs-4 mb-0 fw-semibold">Restaurant Rater</h3>
-                                    <h3 class="fs-5 fw-normal">Zobacz szczegóły <i class="fa-solid fa-arrow-up-right-from-square fs-6"></i></h3>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="modal modal-xl fade" id="staticBackdrop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" role="dialog">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="staticBackdropLabel">Restaurant rater</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <?php foreach ($projects as $key => $project): ?>
+                            <!-- Projekt -->
+                                <div data-bs-toggle="modal" class="project-box position-relative overflow-hidden" data-bs-target="#modal-<?php echo strtolower(str_replace(' ', '-', $project['title'])); ?>">
+                                    <img src="<?php echo $project['main_image']; ?>" alt="" class="w-100"/>
+                                    <div class="overlay text-white fs-5 text-center position-absolute top-0 start-0 bottom-0 end-0 d-flex flex-column justify-content-center align-items-center">
+                                        <h3 class="fs-4 mb-0 fw-semibold"><?php echo $project['title']; ?></h3>
+                                        <h3 class="fs-5 fw-normal">Zobacz szczegóły <i class="fa-solid fa-arrow-up-right-from-square fs-6"></i></h3>
                                     </div>
-                                    <div class="modal-body">
-                                        <div class="row">
-                                            <div class="col-lg-5 project-gallery">
-                                                <a href="assets/img/projects/restaurant-rater/project.png" data-fancybox="gallery" data-caption="Caption #2" class="modal-project-img"><img src="assets/img/projects/restaurant-rater/project.png" alt="" class="w-100 "/></a>
-                                                <div class="row mt-3">
-                                                    <div class="col-4">
-                                                        <a href="assets/img/projects/restaurant-rater/login.png" data-fancybox="gallery" data-caption="Caption #2" class="modal-project-img"><img src="assets/img/projects/restaurant-rater/login.png" alt="" class="w-100 "/></a>
-                                                    </div>
-                                                    <div class="col-4">
-                                                        <a href="assets/img/projects/restaurant-rater/list.png" data-fancybox="gallery" data-caption="Caption #2" class="modal-project-img"><img src="assets/img/projects/restaurant-rater/list.png" alt="" class="w-100 "/></a>
-                                                    </div>
-                                                    <div class="col-4">
-                                                        <a href="assets/img/projects/restaurant-rater/details.png" data-fancybox="gallery" data-caption="Caption #2" class="modal-project-img"><img src="assets/img/projects/restaurant-rater/details.png" alt="" class="w-100 "/></a>
+                                </div>
+
+                            <!-- Modal dla projektu -->
+                            <div class="modal modal-xl fade" id="modal-<?php echo strtolower(str_replace(' ', '-', $project['title'])); ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title"><?php echo $project['title']; ?></h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <!-- Galeria zdjęć -->
+                                                <div class="col-lg-5 project-gallery">
+                                                    <a href="<?php echo $project['main_image']; ?>" data-fancybox="gallery-<?= $key ?>" class="modal-project-img">
+                                                        <img src="<?php echo $project['main_image']; ?>" alt="" class="w-100"/>
+                                                    </a>
+                                                    <div class="row mt-3">
+                                                        <?php foreach ($project['images'] as $image): ?>
+                                                            <div class="col-4">
+                                                                <a href="<?php echo $image; ?>" data-fancybox="gallery-<?= $key ?>" class="modal-project-img">
+                                                                    <img src="<?php echo $image; ?>" alt="" class="w-100"/>
+                                                                </a>
+                                                            </div>
+                                                        <?php endforeach; ?>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-7 mt-4 mt-lg-0">
-                                                <h4 class="fs-5 mb-1">Opis</h4>
-                                                <p>Restaurant Rater to aplikacja, która pozwala użytkownikom oceniać i recenzować restauracje, obsługując zarówno zwykłych użytkowników, jak i administratorów z różnymi uprawnieniami. Posiada funkcję rejestracji użytkowników i oferuje możliwość wyszukiwania i sortowania ofert restauracji w oparciu o różne kryteria, zwiększając komfort użytkowania.
-                                                </p>
-                                                <h4 class="fs-5 mb-1 mt-4">Link</h4>
-                                                <div class="project-links ">
-                                                    <a href="https://github.com/Goferov/restaurant-rater" target="_blank"><i class="fa-brands fa-github text-primary me-2"></i> Github</a>
-                                                </div>
-                                                <h4 class="fs-5 mb-1 mt-4">Technologie</h4>
-                                                <div class="project-tags text-white fw-medium d-flex align-items-center">
-                                                    <span>HTML</span>
-                                                    <span>JS</span>
-                                                    <span>CSS</span>
-                                                    <span>PHP</span>
-                                                    <span>POSTGRESQL</span>
-                                                    <span>DOCKER</span>
+
+                                                <!-- Opis projektu -->
+                                                <div class="col-lg-7 mt-4 mt-lg-0">
+                                                    <h4 class="fs-5 mb-1">Opis</h4>
+                                                    <p><?php echo $project['description']; ?></p>
+
+                                                    <?php if (!empty($project['github_link'])): ?>
+                                                        <h4 class="fs-5 mb-1 mt-4">Link</h4>
+                                                        <div class="project-links">
+                                                            <a href="<?php echo $project['github_link']; ?>" target="_blank">
+                                                                <i class="fa-brands fa-github text-primary me-2"></i> Github
+                                                            </a>
+                                                        </div>
+                                                    <?php endif; ?>
+
+                                                    <h4 class="fs-5 mb-1 mt-4">Technologie</h4>
+                                                    <div class="project-tags text-white fw-medium d-flex align-items-center">
+                                                        <?php foreach ($project['technologies'] as $tech): ?>
+                                                            <span><?php echo $tech; ?></span>
+                                                        <?php endforeach; ?>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        <?php endforeach; ?>
+
 
                     </div>
                 </div>
