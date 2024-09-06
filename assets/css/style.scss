@@ -185,7 +185,7 @@ section {
 // NAVBAR
 .navbar{
   font-weight: 500;
-  --bs-nav-link-font-size: 1.5rem;
+  --bs-nav-link-font-size: 1.3rem;
   --bs-nav-link-font-weight: 500;
 
   &-nav {
@@ -470,7 +470,27 @@ section {
   //}
 }
 
+// TIMELINE
 
+.timeline {
+
+  width: fit-content;
+
+  > div {
+    margin-bottom: 3rem;
+  }
+
+  &-dot {
+    position: absolute;
+    top: 0;
+    left: -9px;
+    color: var(--godfryd-primary);
+  }
+
+  h3 {
+    line-height: 1;
+  }
+}
 
 
 

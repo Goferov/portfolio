@@ -54,6 +54,10 @@ header {
   text-align: center;
 }
 
+.border-title {
+  border-color: var(--border-title-color);
+}
+
 section:nth-of-type(odd) {
   background-color: var(--odd-section-bg);
 }
@@ -138,7 +142,7 @@ section:nth-of-type(even) {
 
 .navbar {
   font-weight: 500;
-  --bs-nav-link-font-size: 1.5rem;
+  --bs-nav-link-font-size: 1.3rem;
   --bs-nav-link-font-weight: 500;
 }
 .navbar-nav {
@@ -397,6 +401,22 @@ section:nth-of-type(even) {
 .skills-list > div p {
   margin-top: 10px;
   font-size: 1rem;
+}
+
+.timeline {
+  width: fit-content;
+}
+.timeline > div {
+  margin-bottom: 3rem;
+}
+.timeline-dot {
+  position: absolute;
+  top: 0;
+  left: -9px;
+  color: var(--godfryd-primary);
+}
+.timeline h3 {
+  line-height: 1;
 }
 
 .form-wrapper {

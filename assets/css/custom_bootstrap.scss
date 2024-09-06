@@ -45,8 +45,8 @@ $theme-colors: map-merge($theme-colors, (
   --skill-bg: var(--godfryd-white);
   --skill-color: var(--godfryd-black);
 
-  --contact-bg: var(--godfryd-white);
-  --input-bg: var(--godfryd-graylight);
+  --contact-bg: var(--godfryd-graylight);
+  --input-bg: var(--godfryd-white);
   --input-color: var(--godfryd-black);
 
   --border-title-color: var(--godfryd-black);
@@ -72,7 +72,7 @@ body.dark-theme {
 
   --border-title-color: var(--godfryd-white);
 
-  --contact-bg: var(--godfryd-black);
+  --contact-bg: #{$dark};
   --input-bg: #{$dark};
   --input-color: var(--godfryd-white);
 }
