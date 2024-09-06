@@ -24,7 +24,7 @@ $theme-colors: map-merge($theme-colors, (
 // set changes
 @import "../bootstrap/bootstrap.scss";
 
-:root{
+:root {
   --godfryd-primary: #{$primary};
   --godfryd-white: #FFFFFF;
   --godfryd-graylight: #{$secondary};
@@ -53,7 +53,6 @@ $theme-colors: map-merge($theme-colors, (
 
   --placeholder-color: #A1A1A1;
   --fancybox-zIndex: 1000000;
-
 }
 
 
@@ -75,6 +74,12 @@ body.dark-theme {
   --contact-bg: #{$dark};
   --input-bg: #{$dark};
   --input-color: var(--godfryd-white);
+
+  .btn-close {
+    --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+
+  }
+
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1{
@@ -87,6 +92,10 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1{
 
 .modal {
   --bs-modal-border-radius: 0;
+
+  .btn-close {
+    //--bs-btn-close-bg: '';
+  }
 }
 
 .bg-graylight{
