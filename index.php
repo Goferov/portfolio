@@ -511,7 +511,7 @@ $projects = [
                                                     <?php endif; ?>
 
                                                     <h4 class="fs-5 mb-1 mt-4">Technologie</h4>
-                                                    <div class="project-tags text-white fw-medium d-flex align-items-center">
+                                                    <div class="project-tags text-white fw-medium d-flex align-items-center flex-wrap gap-2">
                                                         <?php foreach ($project['technologies'] as $tech): ?>
                                                             <span><?php echo $tech; ?></span>
                                                         <?php endforeach; ?>

@@ -486,13 +486,6 @@ section:nth-of-type(even) {
 .project-tags span {
   background-color: var(--godfryd-primary);
   padding: 0.4rem 0.5rem;
-  margin: 0 0.3rem;
-}
-.project-tags span:first-of-type {
-  margin-left: 0;
-}
-.project-tags span:last-of-type {
-  margin-right: 0;
 }
 .project-gallery a {
   display: block;
