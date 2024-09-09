@@ -499,9 +499,11 @@ section:nth-of-type(even) {
   cursor: pointer;
   max-height: 306px;
 }
+.project-box img {
+  object-fit: cover;
+}
 .project-box:hover img, .project-box:focus img, .project-box:focus-within img {
   transform: scale(1.025);
-  object-fit: cover;
 }
 .project-box:hover .overlay, .project-box:focus .overlay, .project-box:focus-within .overlay {
   opacity: 100%;
