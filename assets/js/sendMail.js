@@ -8,24 +8,24 @@ function sendForm(e) {
     let isValid = true;
 
     if (name === "") {
-        setError('name', "Name is required.");
+        setError('name', "Nazwa jest wymagana.");
         isValid = false;
     } else {
         clearError('name');
     }
 
     if (email === "") {
-        setError('email', "Email is required.");
+        setError('email', "Adres e-mail jest wymagany.");
         isValid = false;
     } else if (!validateEmail(email)) {
-        setError('email', "Invalid email format.");
+        setError('email', "Nieprawidłowy format wiadomości e-mail.");
         isValid = false;
     } else {
         clearError('email');
     }
 
     if (message === "") {
-        setError('message', "Message is required.");
+        setError('message', "Wiadomość jest wymagana.");
         isValid = false;
     } else {
         clearError('message');
