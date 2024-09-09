@@ -51,6 +51,17 @@ $projects = [
         "github_link" => "https://github.com/Goferov/game-rater",
         "technologies" => ["PHP", "JS", 'SCSS', 'LARAVEL', 'SQL']
     ],
+
+    [
+        "title" => "Event Management API",
+        "description" => "Ten projekt to API zbudowane przy użyciu Laravel 10, zaprojektowane do zarządzania tworzeniem wydarzeń, rejestracją uczestników oraz uwierzytelnianiem. API obsługuje logowanie i wylogowywanie użytkowników za pomocą Laravel Sanctum do uwierzytelniania, operacje CRUD dla wydarzeń i uczestników oraz wysyłanie powiadomień przypominających o nadchodzących wydarzeniach. Wykorzystuje również system kolejek Laravel do przetwarzania w tle oraz Scheduler do automatyzacji zadań, takich jak wysyłanie przypomnień.",
+        "main_image" => "assets/img/projects/event-management-api/img.png",
+        "images" => [
+
+        ],
+        "github_link" => "https://github.com/Goferov/event-management-api",
+        "technologies" => ["PHP", "LARAVEL", "SANCTUM", "MARIADB"]
+    ],
 ];
 
 
@@ -289,6 +300,13 @@ $projects = [
                                 </div>
                                 <p class="rate">Intermediate</p>
                             </div>
+                            <div>
+                                <div class="content">
+                                    <svg id="tailwind" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 6.036c-2.667 0-4.333 1.325-5 3.976 1-1.325 2.167-1.822 3.5-1.491.761.189 1.305.738 1.906 1.345C13.387 10.855 14.522 12 17 12c2.667 0 4.333-1.325 5-3.976-1 1.325-2.166 1.822-3.5 1.491-.761-.189-1.305-.738-1.907-1.345-.98-.99-2.114-2.134-4.593-2.134zM7 12c-2.667 0-4.333 1.325-5 3.976 1-1.326 2.167-1.822 3.5-1.491.761.189 1.305.738 1.907 1.345.98.989 2.115 2.134 4.594 2.134 2.667 0 4.333-1.325 5-3.976-1 1.325-2.167 1.822-3.5 1.491-.761-.189-1.305-.738-1.906-1.345C10.613 13.145 9.478 12 7 12z"/></svg>
+                                    <p>Tailwind</p>
+                                </div>
+                                <p class="rate">Intermediate</p>
+                            </div>
                         </div>
                     </div>
 
@@ -442,7 +460,7 @@ $projects = [
                         <?php foreach ($projects as $key => $project): ?>
                             <!-- Projekt -->
                                 <div data-bs-toggle="modal" class="project-box position-relative overflow-hidden" data-bs-target="#modal-<?php echo strtolower(str_replace(' ', '-', $project['title'])); ?>">
-                                    <img src="<?php echo $project['main_image']; ?>" alt="" class="w-100"/>
+                                    <img src="<?php echo $project['main_image']; ?>" alt="<?php echo $project['title']; ?>" class="w-100 h-100"/>
                                     <div class="overlay text-white fs-5 text-center position-absolute top-0 start-0 bottom-0 end-0 d-flex flex-column justify-content-center align-items-center">
                                         <h3 class="fs-4 mb-0 fw-semibold"><?php echo $project['title']; ?></h3>
                                         <h3 class="fs-5 fw-normal">Zobacz szczegóły <i class="fa-solid fa-arrow-up-right-from-square fs-6"></i></h3>

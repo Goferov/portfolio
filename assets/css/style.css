@@ -365,6 +365,9 @@ section:nth-of-type(even) {
 .skills-list > div:hover img[alt=jquery], .skills-list > div:hover svg#jquery {
   fill: #0769ad;
 }
+.skills-list > div:hover img[alt=tailwind], .skills-list > div:hover svg#tailwind {
+  fill: #06b6d4;
+}
 .skills-list > div img, .skills-list > div svg {
   width: 100%;
   max-height: 70px;
