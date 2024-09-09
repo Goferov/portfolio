@@ -240,7 +240,7 @@ $projects = [
                             <span class="fw-semibold">Email: </span> marcingodfryd@gmail.com
                         </div>
 
-                        <a download="" target="_blank" href="assets/pdf/Marcin-Godfryd-CV.pdf" title="Pobierz CV" class="btn btn-primary mt-4 mb-3 d-inline-flex align-items-center px-5 mx-auto mx-lg-0 w-auto">Pobierz CV <i class="fa-solid fa-download ms-2 fs-5"></i></a>
+                        <a download="" target="_blank" href="assets/pdf/Marcin-Godfryd-CV.pdf" title="Pobierz CV" class="btn btn-primary mt-4 mb-3 d-flex align-items-center px-5 mx-auto mx-sm-0 w-fit-content">Pobierz CV <i class="fa-solid fa-download ms-2 fs-5"></i></a>
 
                     </div>
                 </div>
