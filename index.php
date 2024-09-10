@@ -106,7 +106,7 @@ $projects = [
     <link href="assets/css/custom_bootstrap.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
-<body class="">
+<body class="<?= $_COOKIE['theme'] ?? '' ?>">
     <header class="py-3 py-lg-2">
         <div class="container-xxl">
             <div class="row">

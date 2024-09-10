@@ -144,7 +144,7 @@
 
     Fancybox.bind("[data-fancybox]");
 
-    setThemeFromCookie();
+    // setThemeFromCookie();
     scrollUp();
     scrollActive();
 
