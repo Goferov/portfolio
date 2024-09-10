@@ -9,11 +9,13 @@ class Mailer
 {
     private $mail;
     private $config;
+    private $server;
 
     public function __construct()
     {
         $this->config = require 'config.php';
         $this->mail = new PHPMailer(true);
+        $this->server = $_SERVER;
         $this->configureSMTP();
     }
 
@@ -49,6 +51,7 @@ class Mailer
                 <p><strong>Nazwa:</strong> $name</p>
                 <p><strong>Email:</strong> $email</p>
                 <p><strong>Wiadomość:</strong><br>$message</p>
+                <p><strong>IP:</strong><br>{$this->server['REMOTE_ADDR']}</p>
             ";
             $this->mail->AltBody = "Nazwa: $name\nEmail: $email\nWiadomość: $message";
             $this->mail->send();
