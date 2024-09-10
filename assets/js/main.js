@@ -159,9 +159,9 @@
     sr.reveal('.from-left', {origin: 'left'});
     sr.reveal('.from-right', {origin: 'right'});
     sr.reveal('.section-title ', {origin: 'top', delay: 50});
-    sr.reveal('.skills-list.left > div ', {origin: 'left', interval: 200, delay: 700});
-    sr.reveal('.skills-list.right > div ', {origin: 'right', interval: 200, delay: 700});
-    sr.reveal('.project-list > div ', {origin: 'left', interval: 200, delay: 700});
+    sr.reveal('.skills-list.left > div ', {origin: 'left', interval: 200, delay: 700, duration: 1200});
+    sr.reveal('.skills-list.right > div ', {origin: 'right', interval: 200, delay: 700, duration: 1200});
+    sr.reveal('.project-box ', {origin: 'left', interval: 200, delay: 700, duration: 1200});
 
 
 })();
