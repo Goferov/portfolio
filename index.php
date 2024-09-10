@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $projects = [
     [
         "title" => "Restaurant Rater",
@@ -190,7 +192,7 @@ $projects = [
                         <h1 class="f-bebas-neue my-3 d-none d-lg-block">Marcin Godfryd</h1>
                         <hr class="w-25 border-title border-2 opacity-100 d-lg-block mx-auto mx-lg-0">
                         <div class="my-3 text-center text-lg-start mx-auto mx-lg-0">
-                            <b>Web developer</b>, pasjonat technologii, entuzjasta innowacji, pasjonat programowania.
+                            <b>Web developer</b>, pasjonat technologii, entuzjasta innowacji, miłośnik programowania.
                         </div>
                         <a href="#contact" title="Contact" class="btn btn-primary my-3 scroll-link mx-auto mx-lg-0">Kontakt</a>
                         <div class="socials my-3 mx-auto mx-lg-0">
@@ -554,6 +556,26 @@ $projects = [
                     </div>
                     <div class="col-xl-5 col-lg-6 from-right">
                         <form id="contactForm" method="post" action="/sendMail.php" class="form-wrapper p-3 p-sm-5">
+                            <?php if (isset($_SESSION['errors'])): ?>
+                                <div class="alert alert-danger d-flex align-items-center" role="alert">
+                                    <div class="bi flex-shrink-0 me-2 fs-5"><i class="fa-sharp fa-solid fa-triangle-exclamation"></i></div>
+                                    <ul class="mb-0">
+                                        <?php foreach ($_SESSION['errors'] as $error): ?>
+                                            <li><?php echo htmlspecialchars($error); ?></li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </div>
+                                <?php unset($_SESSION['errors']); ?>
+                            <?php endif; ?>
+
+                            <?php if (isset($_SESSION['success'])): ?>
+                                <div class="alert alert-success d-flex align-items-center" role="alert">
+                                    <div class="bi flex-shrink-0 me-2 fs-5"><i class="fa-sharp fa-solid fa-circle-check"></i></div>
+                                    <p class="mb-0"><?php echo htmlspecialchars($_SESSION['success']); ?></p>
+                                </div>
+                                <?php unset($_SESSION['success']);  ?>
+                            <?php endif; ?>
+
                             <div class="form-group mb-4">
                                 <label for="name" class="mb-1">Imię i nazwisko</label>
                                 <input id="name" type="text" name="name" class="form-control" placeholder="Wpisz imię i nazwisko">
