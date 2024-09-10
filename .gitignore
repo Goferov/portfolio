@@ -1,3 +1,5 @@
 .idea
 assets/pdf
 vendor
+.htaccess
+config.php
