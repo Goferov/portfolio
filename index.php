@@ -76,6 +76,7 @@ $projects = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Marcin Godfryd — Web Developer</title>
 
     <!-- Favicons -->
@@ -86,6 +87,9 @@ $projects = [
     <link rel="mask-icon" href="assets/img/favicon/safari-pinned-tab.svg" color="#141414">
     <meta name="msapplication-TileColor" content="#141414">
     <meta name="theme-color" content="#141414">
+
+    <meta name="description" content="Marcin Godfryd - Web Developer - CV & Portfolio">
+    <meta name="keywords" content="marcin godfryd, marcingodfryd.pl, marcin godfryd cv, marcin godfryd portfolio, web developer, full stack developer">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
