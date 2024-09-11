@@ -192,6 +192,62 @@ section {
 
 
 
+// LOADER
+
+
+#pageLoader {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  z-index: 5000;
+  background-color: var(--bs-body-bg);
+  color: var(--bs-heading-color);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+
+  &.fade-out {
+    opacity: 0;
+  }
+
+  .loading {
+    font-size: 6rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    span {
+      display: inline-block;
+      margin: 0 -.05em;
+    }
+  }
+
+  .loading-anim {
+    span {
+      animation: loading 1.4s infinite alternate;
+      @for $i from 0 through 6 {
+        &:nth-child(#{$i+1}) {
+          animation-delay: #{$i*.1}s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
 // AVATAR
 
 .avatar {

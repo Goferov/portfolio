@@ -105,8 +105,25 @@ $projects = [
     <!-- CSS -->
     <link href="assets/css/custom_bootstrap.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- sendMail.js -->
+    <script defer src="assets/js/sendMail.min.js"></script>
+
+    <!-- Main.js -->
+    <script defer src="assets/js/main.js"></script>
 </head>
 <body class="<?= $_COOKIE['theme'] ?? '' ?>">
+    <div id="pageLoader">
+        <div class="loading loading-anim">
+            <span>G</span>
+            <span>O</span>
+            <span>D</span>
+            <span>F</span>
+            <span>R</span>
+            <span>Y</span>
+            <span>D</span>
+        </div>
+    </div>
     <header class="py-3 py-lg-2">
         <div class="container-xxl">
             <div class="row">
@@ -678,10 +695,6 @@ $projects = [
     <!-- Recaptcha -->
     <script src="https://www.google.com/recaptcha/api.js?render=6LfA_TIqAAAAAFV1XknwAETlaOYYTVhWhhpiWVog"></script>
 
-    <!-- sendMail.js -->
-    <script src="assets/js/sendMail.js"></script>
 
-    <!-- Main.js -->
-    <script src="assets/js/main.js"></script>
 </body>
 </html>
