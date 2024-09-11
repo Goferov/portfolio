@@ -155,7 +155,7 @@ $projects = [
 
         <div class="ul-wrap h-100 ms-auto">
             <ul class="navbar-nav gap-4 align-items-end d-flex flex-column pt-3 ">
-                <li id="menuClose" class="hamburger align-self-end pe-3 pt-0 active d-block d-lg-none hamburger-squeeze js-hamburger">
+                <li id="menuClose" class="hamburger align-self-end mt-2 pe-3 pt-0 active d-block d-lg-none hamburger-squeeze js-hamburger">
                     <div class="hamburger-box">
                         <div class="hamburger-inner"></div>
                     </div>

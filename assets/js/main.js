@@ -94,8 +94,18 @@
     });
 
     function toggleMenu() {
-        // menuToggle.classList.toggle('active');
-        mobileNav.classList.toggle('active')
+        const mobileNav = document.getElementById('mobileNav');
+
+        if (mobileNav.classList.contains('active')) {
+            mobileNav.classList.remove('active');
+            setTimeout(() => {
+                mobileNav.style.zIndex = '-1';
+            }, 500);
+
+        } else {
+            mobileNav.style.zIndex = '1000';
+            mobileNav.classList.add('active');
+        }
     }
 
     menuToggle.addEventListener('click', toggleMenu);

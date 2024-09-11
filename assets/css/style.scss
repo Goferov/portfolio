@@ -255,19 +255,27 @@ section {
   position: fixed;
   width: 100vw;
   top: 0;
-  z-index: 1000;
-  right: -110%;
+  z-index: -1;
+  right: 0;
   height: 100%;
-  transition: right .5s ease;
-  background-color: rgba(0, 0, 0, 0.6);
+  transition: background-color .3s ease;
+  background-color: transparent;
 
   .ul-wrap {
+    position: fixed;
     width: 85%;
     background-color: var(--header-bg);
+    right: -90%;
+    transition: right .5s ease;
   }
 
   &.active {
-    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+
+    .ul-wrap {
+      right: 0;
+    }
   }
 }
 

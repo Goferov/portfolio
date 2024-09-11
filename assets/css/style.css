@@ -201,17 +201,24 @@ section:nth-of-type(even) {
   position: fixed;
   width: 100vw;
   top: 0;
-  z-index: 1000;
-  right: -110%;
+  z-index: -1;
+  right: 0;
   height: 100%;
-  transition: right 0.5s ease;
-  background-color: rgba(0, 0, 0, 0.6);
+  transition: background-color 0.3s ease;
+  background-color: transparent;
 }
 #mobileNav .ul-wrap {
+  position: fixed;
   width: 85%;
   background-color: var(--header-bg);
+  right: -90%;
+  transition: right 0.5s ease;
 }
 #mobileNav.active {
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+#mobileNav.active .ul-wrap {
   right: 0;
 }
 
