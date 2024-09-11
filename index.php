@@ -116,7 +116,7 @@ $projects = [
     <script defer src="assets/js/sendMail.min.js"></script>
 
     <!-- Main.js -->
-    <script defer src="assets/js/main.js"></script>
+    <script defer src="assets/js/main.min.js"></script>
 </head>
 <body class="<?= $_COOKIE['theme'] ?? '' ?>">
     <div id="pageLoader">
