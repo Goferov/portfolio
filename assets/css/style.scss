@@ -27,6 +27,15 @@ $images: (
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+
+  @media only screen and (max-width: 576px){
+    font-size: 14px;
+  }
+
+  @media only screen and (max-width: 320px){
+    font-size: 13px;
+  }
+
 }
 
 body{
@@ -592,6 +601,7 @@ section {
     }
   }
 
+
 }
 
 .project-box {
@@ -625,6 +635,11 @@ section {
     transition: opacity 0.3s ease;
   }
 }
+
+
+// MODAL
+
+
 
 
 // FOOTER

@@ -117,7 +117,7 @@ $projects = [
                 </div>
                 <nav class="col-6 navbar navbar-expand align-items-center justify-content-end">
                     <div class="fs-2 d-block d-lg-none me-4">
-                        <div class="changeThemeBtn"><i class="fa-solid fa-moon"></i></div>
+                        <div class="changeThemeBtn"><i class="fa-solid <?= $_COOKIE['theme'] ? 'fa-sun' : 'fa-moon' ?>"></i></div>
                     </div>
                     <div id="menuToggle" class="hamburger d-block d-lg-none hamburger-squeeze js-hamburger">
                         <div class="hamburger-box">
@@ -144,7 +144,7 @@ $projects = [
                             <a class="nav-link text-nowrap scroll-link" href="#contact">Kontakt</a>
                         </li>
                         <li class="nav-item">
-                            <div class="nav-link changeThemeBtn"><i class="fa-solid fa-moon"></i></div>
+                            <div class="nav-link changeThemeBtn"><i class="fa-solid <?= $_COOKIE['theme'] ? 'fa-sun' : 'fa-moon' ?>"></i></div>
                         </li>
                     </ul>
                 </nav>
@@ -220,7 +220,7 @@ $projects = [
                                 Od najmłodszych lat interesuję się technologią, co naturalnie doprowadziło mnie do świata programowania. Zaczynając od prostych projektów, z biegiem czasu rozwijałem swoje umiejętności, dzięki czemu programowanie stało się nie tylko moją pasją, ale również codzienną pracą.
                             </p>
                             <p>
-                                Obecnie studiuję informatykę, stale poszerzając swoją wiedzę i umiejętności w zakresie tworzenia aplikacji internetowych. Jestem gotowy na nowe wyzwania, które pozwolą mi rozwijać się jako programista oraz zdobywać cenne doświadczenie, a także stworzą możliwość nauki nowych technologi i narzędzi. Wierzę, że każda nowa praca to szansa na dalszy rozwój.
+                                Obecnie studiuję informatykę, stale poszerzając swoją wiedzę i umiejętności w zakresie tworzenia aplikacji internetowych. Jestem gotowy na nowe wyzwania, które pozwolą mi rozwijać się jako programista oraz zdobywać cenne doświadczenie, a także stworzą możliwość nauki nowych technologii i narzędzi.
                             </p>
                         </div>
                     </div>
@@ -239,7 +239,7 @@ $projects = [
                         </div>
                         <div class="my-3">
                             <i class="fa-sharp fa-solid fa-chevron-right text-primary me-2"></i>
-                            <span class="fw-semibold">Numer telefonu: </span> +48 514 363 105
+                            <span class="fw-semibold">Telefon: </span> +48 514 363 105
                         </div>
                         <div class="my-3">
                             <i class="fa-sharp fa-solid fa-chevron-right text-primary me-2"></i>
@@ -479,7 +479,7 @@ $projects = [
                                     </div>
                                 </div>
 
-                            <div class="modal modal-xl fade" id="modal-<?php echo strtolower(str_replace(' ', '-', $project['title'])); ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" role="dialog">
+                            <div class="modal modal-xl fade project-modal" id="modal-<?php echo strtolower(str_replace(' ', '-', $project['title'])); ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" role="dialog">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
