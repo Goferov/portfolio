@@ -1,7 +1,7 @@
+
 (function () {
 
     // Cache DOM elements
-    const loaderWrapper = document.querySelector("#pageLoader");
     const body = document.querySelector('body');
     const sections = document.querySelectorAll('section[id]');
     const offset = document.querySelector('header').offsetHeight;
@@ -13,14 +13,6 @@
 
     const lightThemeIcon = 'fa-solid fa-sun';
     const darkThemeIcon = 'fa-solid fa-moon';
-
-    // Fade out the loader
-    function fadeOutLoader() {
-        loaderWrapper.classList.add("fade-out");
-        setTimeout(() => {
-            loaderWrapper.style.display = "none";
-        }, 1000);
-    }
 
     // Cookie handling functions
     function setCookie(name, value, days) {
@@ -176,7 +168,6 @@
     });
 
     // Initial setup
-    fadeOutLoader();
     setThemeFromCookie();
     scrollUp();
     scrollActive();

@@ -106,6 +106,10 @@ $projects = [
     <link href="assets/css/custom_bootstrap.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 
+
+    <!-- pageLoader.js -->
+    <script defer src="assets/js/pageLoader.min.js"></script>
+
     <!-- sendMail.js -->
     <script defer src="assets/js/sendMail.min.js"></script>
 
