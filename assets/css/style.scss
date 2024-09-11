@@ -92,6 +92,7 @@ header {
   z-index: 1000;
   box-shadow: 0 0 0.5em var(--godfryd-graydark);
   background-color: var(--header-bg);
+  min-height: 78px;
 }
 
 .grecaptcha-badge {
