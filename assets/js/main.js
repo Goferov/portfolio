@@ -143,9 +143,9 @@
 
         sr.reveal('.from-left', { origin: 'left' });
         sr.reveal('.from-right', { origin: 'right' });
-        sr.reveal('.skills-list.left > div', { origin: 'left', interval: 200, delay: 700, duration: 500 });
-        sr.reveal('.skills-list.right > div', { origin: 'right', interval: 200, delay: 700, duration: 500 });
-        sr.reveal('.project-box', { origin: 'left', interval: 200, delay: 700, duration: 1200 });
+        sr.reveal('.skills-list.left > div', { origin: 'left', interval: 200, delay: 200, duration: 500 });
+        sr.reveal('.skills-list.right > div', { origin: 'right', interval: 200, delay: 200, duration: 500 });
+        sr.reveal('.project-box', { origin: 'left', interval: 200, delay: 200, duration: 1200 });
     }
 
     // Event listeners
