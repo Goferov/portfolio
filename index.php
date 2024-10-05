@@ -140,7 +140,7 @@ $projects = [
                 </div>
                 <nav class="col-6 navbar navbar-expand align-items-center justify-content-end">
                     <div class="fs-2 d-block d-lg-none me-4">
-                        <div class="changeThemeBtn"><i class="fa-solid <?= $_COOKIE['theme'] ? 'fa-sun' : 'fa-moon' ?>"></i></div>
+                        <div class="changeThemeBtn"><i class="fa-solid <?= isset($_COOKIE['theme']) && $_COOKIE['theme'] ? 'fa-sun' : 'fa-moon' ?>"></i></div>
                     </div>
                     <div id="menuToggle" class="hamburger d-block d-lg-none hamburger-squeeze js-hamburger">
                         <div class="hamburger-box">
@@ -167,7 +167,7 @@ $projects = [
                             <a class="nav-link text-nowrap scroll-link" href="#contact">Kontakt</a>
                         </li>
                         <li class="nav-item">
-                            <div class="nav-link changeThemeBtn"><i class="fa-solid <?= $_COOKIE['theme'] ? 'fa-sun' : 'fa-moon' ?>"></i></div>
+                            <div class="nav-link changeThemeBtn"><i class="fa-solid <?= isset($_COOKIE['theme']) && $_COOKIE['theme'] ? 'fa-sun' : 'fa-moon' ?>"></i></div>
                         </li>
                     </ul>
                 </nav>
@@ -212,7 +212,7 @@ $projects = [
                         <h1 class="f-bebas-neue my-3 text-center d-block d-lg-none">Marcin Godfryd</h1>
                         <div class="avatar position-relative mx-auto mx-lg-0">
                             <div></div>
-                            <img src="assets/img/avatar.jpg" alt="Marcin Godfryd - website developer" class="object-fit-cover position-relative img-fluid z-1"/>
+                            <img src="assets/img/avatar.png" alt="Marcin Godfryd - website developer" width="360" class="object-fit-cover position-relative img-fluid z-1"/>
                         </div>
                     </div>
                     <div class="col-lg-6 fs-4 d-flex flex-column justify-content-center align-items-start from-right">
