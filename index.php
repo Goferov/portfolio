@@ -260,10 +260,7 @@ $projects = [
                             <i class="fa-sharp fa-solid fa-chevron-right text-primary me-2"></i>
                             <span class="fw-semibold">Wykształcenie: </span> Średnie
                         </div>
-                        <div class="my-3">
-                            <i class="fa-sharp fa-solid fa-chevron-right text-primary me-2"></i>
-                            <span class="fw-semibold">Telefon: </span> +48 514 363 105
-                        </div>
+
                         <div class="my-3">
                             <i class="fa-sharp fa-solid fa-chevron-right text-primary me-2"></i>
                             <span class="fw-semibold">Email: </span> marcingodfryd@gmail.com
@@ -563,12 +560,7 @@ $projects = [
                 <div class="row justify-content-around">
                     <h2 class="section-title">Kontakt</h2>
                     <div class="col-xl-5 col-lg-6 fs-2 d-flex flex-column justify-content-center align-items-center align-items-lg-start mb-5 mb-lg-0 from-left">
-                        <div class="my-4">
-                            <a href="tel:+48514363105" title="+48 514 363 105" class="d-flex justify-content-center flex-xxs-column text-center align-items-center">
-                                <i class="fa-solid fa-phone me-4 m-xxs-0"></i>
-                                + 48 514 363 105
-                            </a>
-                        </div>
+
                         <div class="my-4">
                             <a href="mailto:marcingodfryd@gmail.com" title="marcingodfryd@gmail.com" class="d-flex justify-content-center flex-xxs-column text-center align-items-center">
                                 <i class="fa-solid fa-envelope me-4 m-xxs-0"></i>
@@ -641,12 +633,7 @@ $projects = [
                 <div class="col-lg-4 mb-3 mb-lg-0">
                     <h6 class="">Contact</h6>
                     <ul class="footer-menu">
-                        <li class="my-1">
-                            <a href="tel:+48514363105" title="Call me!">
-                                <i class="fa-solid fa-phone"></i>
-                                +48 514 363 105
-                            </a>
-                        </li>
+
                         <li class="my-1">
                             <a href="mailto:marcingodfryd@gmail.com" title="marcingodfryd@gmail.com">
                                 <i class="fa-solid fa-envelope "></i>
