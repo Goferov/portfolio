@@ -212,7 +212,7 @@ $projects = [
                         <h1 class="f-bebas-neue my-3 text-center d-block d-lg-none">Marcin Godfryd</h1>
                         <div class="avatar position-relative mx-auto mx-lg-0">
                             <div></div>
-                            <img src="assets/img/avatar.png" alt="Marcin Godfryd - website developer" width="360" class="object-fit-cover position-relative img-fluid z-1"/>
+                            <img src="assets/img/avatar.png" alt="Marcin Godfryd - website developer" width="320" class="object-fit-cover position-relative img-fluid z-1"/>
                         </div>
                     </div>
                     <div class="col-lg-6 fs-4 d-flex flex-column justify-content-center align-items-start from-right">
