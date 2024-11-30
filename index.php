@@ -17,6 +17,19 @@ $projects = [
     ],
 
     [
+        "title" => "Restaurant Rater",
+        "description" => "Restaurant Rater to aplikacja, która pozwala użytkownikom oceniać i recenzować restauracje, obsługując zarówno zwykłych użytkowników, jak i administratorów z różnymi uprawnieniami. Posiada funkcję rejestracji użytkowników i oferuje możliwość wyszukiwania i sortowania ofert restauracji w oparciu o różne kryteria, zwiększając komfort użytkowania.",
+        "main_image" => "assets/img/projects/restaurant-rater/project.png",
+        "images" => [
+            "assets/img/projects/restaurant-rater/login.png",
+            "assets/img/projects/restaurant-rater/list.png",
+            "assets/img/projects/restaurant-rater/details.png"
+        ],
+        "github_link" => "https://github.com/Goferov/restaurant-rater",
+        "technologies" => ["HTML", "JS", "CSS", "PHP", "POSTGRESQL", "DOCKER"]
+    ],
+
+    [
         "title" => "Notes",
         "description" => "Jest to projekt aplikacji internetowej do zarządzania notatkami. Projekt jest zbudowany przy użyciu PHP z obiektową architekturą MVC (Model-View-Controller). Zawiera również obsługę błędów.",
         "main_image" => "assets/img/projects/notes/notes_list.png",
@@ -523,12 +536,20 @@ $projects = [
                                                     <h4 class="fs-5 mb-1">Opis</h4>
                                                     <p><?php echo $project['description']; ?></p>
 
-                                                    <?php if (!empty($project['github_link'])): ?>
+                                                    <?php if (!empty($project['github_link']) || !empty($project['website'])): ?>
                                                         <h4 class="fs-5 mb-1 mt-4">Link</h4>
-                                                        <div class="project-links">
-                                                            <a href="<?php echo $project['github_link']; ?>" target="_blank">
-                                                                <i class="fa-brands fa-github text-primary me-2"></i> Github
-                                                            </a>
+                                                        <div class="project-links d-flex flex-column">
+                                                            <?php if(!empty($project['github_link'])): ?>
+                                                                <a href="<?= $project['github_link']; ?>" target="_blank">
+                                                                    <i class="fa-brands fa-github text-primary me-2"></i> Github
+                                                                </a>
+                                                            <?php endif; ?>
+
+                                                            <?php if(!empty($project['website'])): ?>
+                                                                <a href="<?= $project['website']; ?>" target="_blank">
+                                                                    <i class="fa-solid fa-globe text-primary me-2"></i> <?= $project['website']; ?>
+                                                                </a>
+                                                            <?php endif; ?>
                                                         </div>
                                                     <?php endif; ?>
 
