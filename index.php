@@ -4,16 +4,15 @@ session_start();
 
 $projects = [
     [
-        "title" => "Restaurant Rater",
-        "description" => "Restaurant Rater to aplikacja, która pozwala użytkownikom oceniać i recenzować restauracje, obsługując zarówno zwykłych użytkowników, jak i administratorów z różnymi uprawnieniami. Posiada funkcję rejestracji użytkowników i oferuje możliwość wyszukiwania i sortowania ofert restauracji w oparciu o różne kryteria, zwiększając komfort użytkowania.",
-        "main_image" => "assets/img/projects/restaurant-rater/project.png",
+        "title" => "Testbench",
+        "description" => "TestBench.pl to nowoczesna strona oparta na WordPressie z bazą danych MySQL, dedykowana publikacji artykułów o sprzęcie komputerowym, poradników oraz testów produktów. W projekcie skupiono się na optymalizacji SEO, co pozwala na lepszą widoczność w wyszukiwarkach. Strona została zaprojektowana z myślą o responsywności, zapewniając wygodne przeglądanie na różnych urządzeniach. Dzięki elastycznemu systemowi WordPress, zarządzanie treściami i kategoryzacją artykułów jest intuicyjne i efektywne.",
+        "main_image" => "assets/img/projects/testbench/hp.png",
         "images" => [
-            "assets/img/projects/restaurant-rater/login.png",
-            "assets/img/projects/restaurant-rater/list.png",
-            "assets/img/projects/restaurant-rater/details.png"
+            "assets/img/projects/testbench/article.png",
+            "assets/img/projects/testbench/article2.png"
         ],
-        "github_link" => "https://github.com/Goferov/restaurant-rater",
-        "technologies" => ["HTML", "JS", "CSS", "PHP", "POSTGRESQL", "DOCKER"]
+        "website" => "https://testbench.pl/",
+        "technologies" => ["HTML", "JS", "CSS", "PHP", "WORDPRESS", "MARIADB"]
     ],
 
     [
