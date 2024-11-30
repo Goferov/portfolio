@@ -254,10 +254,6 @@ $projects = [
                         </div>
                         <div class="my-3">
                             <i class="fa-sharp fa-solid fa-chevron-right text-primary me-2"></i>
-                            <span class="fw-semibold">Status: </span> Student
-                        </div>
-                        <div class="my-3">
-                            <i class="fa-sharp fa-solid fa-chevron-right text-primary me-2"></i>
                             <span class="fw-semibold">Wykształcenie: </span> Średnie
                         </div>
 
