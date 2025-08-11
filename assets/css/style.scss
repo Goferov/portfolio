@@ -11,16 +11,19 @@ $technologies: (
         "git-alt": #f05032,
         "wordpress": #21759b,
         "docker": #0db7ed,
-        "leaf": #47a248 // MongoDB
+        "leaf": #47a248, // MongoDB
 );
 
 
 $images: (
         "CodeIgniter": #DD4814,
         "MySQL": #00758f,
+        "react": #61DBFB,
         "jquery": #0769ad,
         "tailwind": #06b6d4,
         "PostgreSQL": #0064a5,
+        "postman": #EF5B25,
+        "openapi": #47a248
 );
 
 
@@ -489,13 +492,13 @@ section {
 
       @each $tech, $color in $technologies {
         &:hover i.fa-#{$tech} {
-          color: $color;
+          color: $color!important;
         }
       }
 
       @each $img, $color in $images {
         &:hover img[alt="#{$img}"], &:hover svg##{$img} {
-          fill: $color;
+          fill: $color!important;
         }
       }
 
