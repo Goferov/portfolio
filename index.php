@@ -3,6 +3,34 @@
 session_start();
 
 $projects = [
+
+
+    [
+        "title" => "Restaurant Rater",
+        "description" => "Restaurant Rater to aplikacja, która pozwala użytkownikom oceniać i recenzować restauracje, obsługując zarówno zwykłych użytkowników, jak i administratorów z różnymi uprawnieniami. Posiada funkcję rejestracji użytkowników i oferuje możliwość wyszukiwania i sortowania ofert restauracji w oparciu o różne kryteria, zwiększając komfort użytkowania.",
+        "main_image" => "assets/img/projects/restaurant-rater/project.png",
+        "images" => [
+            "assets/img/projects/restaurant-rater/login.png",
+            "assets/img/projects/restaurant-rater/list.png",
+            "assets/img/projects/restaurant-rater/details.png"
+        ],
+        "github_link" => "https://github.com/Goferov/top-kebab",
+        "technologies" => ["LARAVEL", "REACT", "TAILWIND", "PHP", "POSTGRESQL", "DOCKER"]
+    ],
+
+    [
+        "title" => "Gym planner",
+        "description" => "Aplikacja dla trenera personalnego – system webowy umożliwiający trenerom tworzenie, edytowanie i przypisywanie indywidualnych planów treningowych klientom. Użytkownicy mogą w prosty sposób przeglądać i realizować ćwiczenia w intuicyjnym interfejsie. Backend zbudowany w Laravel (REST API, JWT, PostgreSQL), frontend w React + Vite z Tailwind CSS. Projekt obejmuje pełny proces od analizy wymagań, przez projektowanie (UML, makiety), po implementację i testy (unit, integracyjne, end-to-end).",
+        "main_image" => "assets/img/projects/gymplanner/dashboard.png",
+        "images" => [
+            "assets/img/projects/gymplanner/plan_create.png",
+            "assets/img/projects/gymplanner/client_exercise.png",
+            "assets/img/projects/gymplanner/client_history.png",
+        ],
+        "github_link" => "https://github.com/Goferov/gym-planner",
+        "technologies" => ["LARAVEL", "REACT", "REST API", "TAILWIND", "POSTGRESQL", "JWT", "PHPUNIT"]
+    ],
+
     [
         "title" => "Testbench",
         "description" => "TestBench.pl to nowoczesna strona oparta na WordPressie z bazą danych MySQL, dedykowana publikacji artykułów o sprzęcie komputerowym, poradników oraz testów produktów. W projekcie skupiono się na optymalizacji SEO, co pozwala na lepszą widoczność w wyszukiwarkach. Strona została zaprojektowana z myślą o responsywności, zapewniając wygodne przeglądanie na różnych urządzeniach. Dzięki elastycznemu systemowi WordPress, zarządzanie treściami i kategoryzacją artykułów jest intuicyjne i efektywne.",
@@ -15,18 +43,6 @@ $projects = [
         "technologies" => ["HTML", "JS", "CSS", "PHP", "WORDPRESS", "MARIADB"]
     ],
 
-    [
-        "title" => "Restaurant Rater",
-        "description" => "Restaurant Rater to aplikacja, która pozwala użytkownikom oceniać i recenzować restauracje, obsługując zarówno zwykłych użytkowników, jak i administratorów z różnymi uprawnieniami. Posiada funkcję rejestracji użytkowników i oferuje możliwość wyszukiwania i sortowania ofert restauracji w oparciu o różne kryteria, zwiększając komfort użytkowania.",
-        "main_image" => "assets/img/projects/restaurant-rater/project.png",
-        "images" => [
-            "assets/img/projects/restaurant-rater/login.png",
-            "assets/img/projects/restaurant-rater/list.png",
-            "assets/img/projects/restaurant-rater/details.png"
-        ],
-        "github_link" => "https://github.com/Goferov/restaurant-rater",
-        "technologies" => ["HTML", "JS", "CSS", "PHP", "POSTGRESQL", "DOCKER"]
-    ],
 
     [
         "title" => "Notes",
@@ -262,11 +278,7 @@ $projects = [
                     <div class="col-lg-5 from-right fs-5">
                         <div class="my-3">
                             <i class="fa-sharp fa-solid fa-chevron-right text-primary me-2"></i>
-                            <span class="fw-semibold">Data urodzenia: </span> 13.01.2001
-                        </div>
-                        <div class="my-3">
-                            <i class="fa-sharp fa-solid fa-chevron-right text-primary me-2"></i>
-                            <span class="fw-semibold">Wykształcenie: </span> Średnie
+                            <span class="fw-semibold">Wykształcenie: </span> Wyższe
                         </div>
 
                         <div class="my-3">
