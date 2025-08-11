@@ -56,19 +56,19 @@ $projects = [
         "github_link" => "https://github.com/Goferov/notes",
         "technologies" => ["HTML", "CSS", "PHP", "MYSQL"]
     ],
-
-    [
-        "title" => "Order Management System",
-        "description" => "Jest to oparta na Javie aplikacja desktopowa przeznaczona do zarządzania zamówieniami w sklepie. Aplikacja zapewnia funkcjonalność zarządzania klientami, produktami i zamówieniami za pośrednictwem graficznego interfejsu użytkownika (GUI) opracowanego przy użyciu frameworka Swing. Aplikacja jest zbudowana wokół wzorca projektowego MVC (Model-View-Controller) i jest zbudowana z naciskiem na rozszerzalność i łatwość konserwacji.",
-        "main_image" => "assets/img/projects/order-management-system/img.png",
-        "images" => [
-            "assets/img/projects/order-management-system/img_1.png",
-            "assets/img/projects/order-management-system/img_2.png",
-            "assets/img/projects/order-management-system/img_6.png"
-        ],
-        "github_link" => "https://github.com/Goferov/shop-orders-java-app",
-        "technologies" => ["JAVA", "SWING"]
-    ],
+//
+//    [
+//        "title" => "Order Management System",
+//        "description" => "Jest to oparta na Javie aplikacja desktopowa przeznaczona do zarządzania zamówieniami w sklepie. Aplikacja zapewnia funkcjonalność zarządzania klientami, produktami i zamówieniami za pośrednictwem graficznego interfejsu użytkownika (GUI) opracowanego przy użyciu frameworka Swing. Aplikacja jest zbudowana wokół wzorca projektowego MVC (Model-View-Controller) i jest zbudowana z naciskiem na rozszerzalność i łatwość konserwacji.",
+//        "main_image" => "assets/img/projects/order-management-system/img.png",
+//        "images" => [
+//            "assets/img/projects/order-management-system/img_1.png",
+//            "assets/img/projects/order-management-system/img_2.png",
+//            "assets/img/projects/order-management-system/img_6.png"
+//        ],
+//        "github_link" => "https://github.com/Goferov/shop-orders-java-app",
+//        "technologies" => ["JAVA", "SWING"]
+//    ],
     [
         "title" => "Game Rater",
         "description" => "Ta aplikacja internetowa została zaprojektowana, aby zapewnić użytkownikom kompleksowy sposób odkrywania i recenzowania gier. Oferuje szeroki zakres funkcji, w tym zarządzanie kontem użytkownika, eksplorację katalogu gier, spersonalizowane listy gier i szczegółowe statystyki gier. Platforma została zbudowana w oparciu o framework Laravel, zgodnie z architekturą MVC i wzorcem projektowym Repository.",
