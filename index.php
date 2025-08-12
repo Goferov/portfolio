@@ -131,6 +131,13 @@ $projects = require __DIR__ . '/data/projects.php';
                         <li class="nav-item">
                             <div class="nav-link changeThemeBtn"><i class="fa-solid <?= isset($_COOKIE['theme']) && $_COOKIE['theme'] ? 'fa-sun' : 'fa-moon' ?>"></i></div>
                         </li>
+                        <li class="nav-item">
+                            <?php if ($lang === 'pl'): ?>
+                                <a href="/en"><img src="/assets/img/en.svg" alt="EN" width="24" height="16"></a>
+                            <?php else: ?>
+                                <a href="/"><img src="/assets/img/pl.svg" alt="PL" width="24" height="16"></a>
+                            <?php endif; ?>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -162,6 +169,13 @@ $projects = require __DIR__ . '/data/projects.php';
                 </li>
                 <li class="nav-item px-3">
                     <a class="nav-link text-nowrap scroll-link" href="#contact"><?= t('nav.contact') ?></a>
+                </li>
+                <li class="nav-item px-3">
+                    <?php if ($lang === 'pl'): ?>
+                        <a href="/en"><img src="/assets/img/en.svg" alt="EN" width="24" height="16"></a>
+                    <?php else: ?>
+                        <a href="/"><img src="/assets/img/pl.svg" alt="PL" width="24" height="16"></a>
+                    <?php endif; ?>
                 </li>
             </ul>
         </div>
