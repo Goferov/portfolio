@@ -220,7 +220,7 @@ $projects = require __DIR__ . '/data/projects.php';
                             <span class="fw-semibold">Email: </span> marcingodfryd@gmail.com
                         </div>
 
-                        <a download="" target="_blank" href="assets/pdf/Marcin-Godfryd-CV.pdf" title="<?= t('btn.cv') ?>" class="btn btn-primary mt-4 mb-3 d-flex align-items-center px-5 mx-auto mx-sm-0 w-fit-content"><?= t('btn.cv') ?> <i class="fa-solid fa-download ms-2 fs-5"></i></a>
+                        <a download="" target="_blank" href="assets/pdf/MarcinGodfryd-CV-<?= $lang ?>.pdf" title="<?= t('btn.cv') ?>" class="btn btn-primary mt-4 mb-3 d-flex align-items-center px-5 mx-auto mx-sm-0 w-fit-content"><?= t('btn.cv') ?> <i class="fa-solid fa-download ms-2 fs-5"></i></a>
 
                     </div>
                 </div>
@@ -554,7 +554,7 @@ $projects = require __DIR__ . '/data/projects.php';
                             <a href="https://www.linkedin.com/in/marcin-godfryd-719b36244/" target="_blank" title="LinkedIn" class="me-4"><i class="fa-brands fa-linkedin-in"></i></a>
                             <a href="https://github.com/Goferov" target="_blank" title="Github"><i class="fa-brands fa-github"></i></a>
                         </div>
-                        <a download="" target="_blank" href="assets/pdf/Marcin-Godfryd-CV.pdf" title="<?= t('btn.cv') ?>" class="btn btn-primary my-4 d-flex align-items-center px-5"><?= t('btn.cv') ?> <i class="fa-solid fa-download ms-2 fs-5"></i></a>
+                        <a download="" target="_blank" href="assets/pdf/MarcinGodfryd-CV-<?= $lang ?>.pdf" title="<?= t('btn.cv') ?>" class="btn btn-primary my-4 d-flex align-items-center px-5"><?= t('btn.cv') ?> <i class="fa-solid fa-download ms-2 fs-5"></i></a>
                     </div>
                     <div class="col-xl-5 col-lg-6 from-right">
                         <form id="contactForm" method="post" action="/sendMail.php" class="form-wrapper p-3 p-sm-5">
