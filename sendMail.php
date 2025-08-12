@@ -1,40 +1,46 @@
 <?php
-
 session_start();
 
 require_once 'Mailer.php';
 require_once 'Recaptcha.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $config = require 'config.php';
-    $mailer = new Mailer();
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $config    = require 'config.php';
+    $mailer    = new Mailer();
     $recaptcha = new Recaptcha($config['recaptchaSecretKey']);
-    $errors = [];
+    $errors    = [];
 
-    $name = !empty($_POST["name"]) ? htmlspecialchars(trim($_POST["name"])) : null;
-    $email = !empty($_POST["email"]) && filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) ? htmlspecialchars(trim($_POST["email"])) : null;
-    $message = !empty($_POST["message"]) ? htmlspecialchars(trim($_POST["message"])) : null;
-    $recaptchaToken = $_POST['g-recaptcha-response'];
+    $name    = isset($_POST['name']) ? trim($_POST['name']) : null;
+    $email   = isset($_POST['email']) ? trim($_POST['email']) : null;
+    $message = isset($_POST['message']) ? trim($_POST['message']) : null;
+    $lang    = $_POST['lang'] ?? 'pl';
+    $lang    = in_array($lang, ['pl','en'], true) ? $lang : 'pl';
 
-    if (!$name) $errors[] = "Nazwa jest wymagana.";
-    if (!$email) $errors[] = "Wymagany jest poprawny adres e-mail.";
-    if (!$message) $errors[] = "Wiadomość jest wymagana.";
-    if (!$recaptcha->verify($recaptchaToken)) $errors[] = "Weryfikacja reCAPTCHA nie powiodła się!";
+    $recaptchaToken = $_POST['g-recaptcha-response'] ?? '';
+
+    if ($name === '')   $errors[] = $lang==='en' ? 'Name is required.' : 'Nazwa jest wymagana.';
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = $lang==='en' ? 'A valid email is required.' : 'Wymagany jest poprawny adres e-mail.';
+    if ($message === '') $errors[] = $lang==='en' ? 'Message is required.' : 'Wiadomość jest wymagana.';
+    if (!$recaptcha->verify($recaptchaToken)) $errors[] = $lang==='en' ? 'reCAPTCHA verification failed!' : 'Weryfikacja reCAPTCHA nie powiodła się!';
 
     if (empty($errors)) {
         try {
             $mailer->sendAdminNotification($email, $name, $message);
-            $mailer->sendUserConfirmation($email, $name, $message);
-            $_SESSION['success'] = "Twoja wiadomość została pomyślnie wysłana.";
+            $mailer->sendUserConfirmation($email, $name, $message, $lang);
 
+            $_SESSION['success'] = $lang==='en'
+                ? 'Your message has been sent successfully.'
+                : 'Twoja wiadomość została pomyślnie wysłana.';
         } catch (Exception $e) {
             $errors[] = $e->getMessage();
         }
     }
-    else {
+
+    if (!empty($errors)) {
         $_SESSION['errors'] = $errors;
     }
 
-    header('Location: /#contact');
+    $redirect = ($lang === 'en') ? '/en#contact' : '/#contact';
+    header('Location: ' . $redirect, true, 303);
     exit();
 }

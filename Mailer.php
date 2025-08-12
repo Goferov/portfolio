@@ -61,11 +61,41 @@ class Mailer
         }
     }
 
-    public function sendUserConfirmation($email, $name, $message)
+    public function sendUserConfirmation($email, $name, $message, string $lang = 'pl')
     {
         try {
             $adminEmail = $this->config['smtp_from_email'];
             $adminName = $this->config['smtp_from_name'];
+
+            $subjects = [
+                'pl' => 'Potwierdzenie wysyłki wiadomości',
+                'en' => 'Your message has been received',
+            ];
+            $html = [
+                'pl' => "
+                <h2>Wiadomość wysłana</h2>
+                <p>Cześć {$name},</p>
+                <p>Dziękujemy za kontakt! Twoja wiadomość dotarła do nas:</p>
+                <blockquote>{$message}</blockquote>
+                <p>Odezwiemy się tak szybko, jak to możliwe.</p>
+                <p>Pozdrawiamy,<br>Zespół marcingodfryd.pl</p>
+            ",
+                'en' => "
+                <h2>Message sent</h2>
+                <p>Hi {$name},</p>
+                <p>Thanks for reaching out. We have received your message:</p>
+                <blockquote>{$message}</blockquote>
+                <p>We will get back to you as soon as possible.</p>
+                <p>Best regards,<br>marcingodfryd.pl Team</p>
+            ",
+            ];
+            $alt = [
+                'pl' => "Cześć {$name},\nDziękujemy za kontakt! Otrzymaliśmy Twoją wiadomość:\n{$message}\nOdezwiemy się najszybciej, jak to możliwe.\n— marcingodfryd.pl",
+                'en' => "Hi {$name},\nThanks for reaching out. We have received your message:\n{$message}\nWe will get back to you as soon as possible.\n— marcingodfryd.pl",
+            ];
+
+            if (!in_array($lang, ['pl','en'], true)) { $lang = 'pl'; }
+
 
             $this->mail->clearAddresses();
             $this->mail->clearReplyTos();
@@ -73,16 +103,9 @@ class Mailer
             $this->mail->addReplyTo($adminEmail);
             $this->mail->addAddress($email, $name);
             $this->mail->isHTML(true);
-            $this->mail->Subject = 'Potwierdzenie wysyłki wiadomości';
-            $this->mail->Body    = "
-                <h2>Wiadomość wysłana</h2>
-                <p>Cześć $name,</p>
-                <p>Dziękujemy za kontakt! Twoja wiadomość została wysłana do nas pomyślnie:</p>
-                <blockquote>$message</blockquote>
-                <p>Odezwiemy się do Ciebie jak najszybciej.</p>
-                <p>Pozdrawiamy,<br>Zespół marcingodfryd.pl</p>
-            ";
-            $this->mail->AltBody = "Cześć $name,\nDziękujemy za kontakt! Twoja wiadomość została wysłana do nas pomyślnie: $message\nOdezwiemy się do Ciebie jak najszybciej.";
+            $this->mail->Subject = $subjects[$lang];
+            $this->mail->Body    = $html[$lang];
+            $this->mail->AltBody = $alt[$lang];
             $this->mail->send();
 
         } catch (Exception $e) {
